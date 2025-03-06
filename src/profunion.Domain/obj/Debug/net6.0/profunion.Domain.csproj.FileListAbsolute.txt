@@ -1,0 +1,13 @@
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\bin\Debug\net6.0\profunion.Domain.deps.json
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\bin\Debug\net6.0\profunion.Domain.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\bin\Debug\net6.0\profunion.Domain.pdb
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.csproj.AssemblyReference.cache
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.AssemblyInfoInputs.cache
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.AssemblyInfo.cs
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.sourcelink.json
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\refint\profunion.Domain.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\profunion.Domain.pdb
+C:\Users\Павел\Desktop\Profunions\src\profunion.Domain\obj\Debug\net6.0\ref\profunion.Domain.dll

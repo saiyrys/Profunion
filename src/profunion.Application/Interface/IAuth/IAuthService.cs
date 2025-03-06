@@ -1,0 +1,18 @@
+﻿using profunion.Shared.Dto.Auth;
+using profunion.Shared.Dto.Users;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace profunion.Applications.Interface.IAuth
+{
+    public interface IAuthService
+    {
+        Task<LoginResponseDto> Login(LoginUserDto loginUser);
+        Task<bool> Registration(RegistrationDto registration);
+        Task<UserInfoDto> GetUser(string token);
+        Task<LoginResponseDto> GetNewTokens(string refreshToken);
+    }
+}
