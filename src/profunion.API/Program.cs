@@ -111,7 +111,7 @@ var tokenSettings = builder.Configuration.GetSection("JwtOptions");
 var secretKey = Encoding.ASCII.GetBytes(tokenSettings.GetValue<string>("SecretKey"));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+    .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -129,16 +129,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             {
                 var token = context.Request.Cookies["accessToken"];
 
-                /*if (string.IsNullOrEmpty(token) && context.Request.Headers.ContainsKey("authorization"))
+                if (string.IsNullOrEmpty(token) && context.Request.Headers.ContainsKey("authorization"))
                 {
                     var authHeader = context.Request.Headers["authorization"].ToString();
-                    *//*Console.WriteLine($"Authorization header: {authHeader}"); // Лог для проверки
+                    Console.WriteLine($"Authorization header: {authHeader}"); // Лог для проверки
 
                     if (authHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
                     {
                         token = authHeader.Substring("Bearer ".Length).Trim();
-                    }*//*
-                }*/
+                    }
+                }
 
                 /*Console.WriteLine($"Final token: {token}"); // Лог для проверки*/
 

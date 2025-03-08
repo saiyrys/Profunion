@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.IO.RecyclableMemoryStreamManager;
 
 namespace profunion.Applications.Services.Newses
 {
@@ -59,7 +60,20 @@ namespace profunion.Applications.Services.Newses
                 newses = _sortNews.SortObject(newses, sort);
             }
 
-            var paginationItem = await _pagination.Paginate(newses.ToList(), page);
+            if (query.date_start != null || query.date_end != null || query.time_start != null || query.time_end != null)
+            {
+                var filteredNews = await _context.Events
+                    .Where(e =>
+                        (!query.date_start.HasValue || e.eventDate >= query.date_start.Value) &&
+                        (!query.date_end.HasValue || e.eventDate <= query.date_end.Value) &&
+                        (!query.time_start.HasValue || e.eventDate >= query.time_start.Value) &&
+                        (!query.time_end.HasValue || e.eventDate <= query.time_end.Value)
+                ).ToListAsync();
+
+                newses = _mapper.Map<List<GetNewsDto>>(filteredNews);
+            }
+
+           var paginationItem = await _pagination.Paginate(newses.ToList(), page);
 
             newses = paginationItem.Items;
             int totalPages = paginationItem.TotalPages;
@@ -73,8 +87,6 @@ namespace profunion.Applications.Services.Newses
 
             var news = newses.FirstOrDefault(e => e.newsId == newsId);
 
-            await IncrementationViews(newsId);
-             
             return news;
         }
 
@@ -173,13 +185,15 @@ namespace profunion.Applications.Services.Newses
             return events;
         }
 
-        private async Task IncrementationViews(string newsId)
+        public async Task<bool> IncrementationViews(string newsId)
         {
             var news = await _newsRepository.GetByIdAsync(newsId);
 
             news.views += 1;
 
             await _newsRepository.UpdateAsync(news);
+
+            return true;
         }
     }
 }

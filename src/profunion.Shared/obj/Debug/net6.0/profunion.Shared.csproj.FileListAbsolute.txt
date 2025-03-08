@@ -8,7 +8,6 @@ C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\pro
 C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\profunion.Shared.AssemblyInfoInputs.cache
 C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\profunion.Shared.AssemblyInfo.cs
 C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\profunion.Shared.csproj.CoreCompileInputs.cache
-C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\profunion.Shared.sourcelink.json
 C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\profunio.8F5FA469.Up2Date
 C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\profunion.Shared.dll
 C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Debug\net6.0\refint\profunion.Shared.dll

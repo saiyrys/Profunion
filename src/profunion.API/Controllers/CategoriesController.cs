@@ -8,7 +8,7 @@ using static Microsoft.IO.RecyclableMemoryStreamManager;
 
 namespace profunion.API.Controllers
 {
-    [Route("api/categories")]
+    [Route("api/category")]
     [ApiController]
     public class CategoryController : Controller
     {
@@ -49,7 +49,7 @@ namespace profunion.API.Controllers
 
             var (categories, totalPages) = await _category.GetAllCategories(page);
 
-            return Ok(new { Items = categories, TotalPages = totalPages });
+            return Ok(categories);
         }
 
         [HttpPatch("{categoryId}")]

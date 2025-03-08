@@ -49,12 +49,14 @@ namespace profunion.Applications.Services.Events
                 events = _sortAction.SortObject(events, sort);
             }
 
-            if(query.dateFrom != null || query.dateTo != null)
+            if(query.date_start != null || query.date_end != null || query.time_start != null || query.time_end != null)
             {
                 var filteredEvents = await _context.Events
                     .Where(e =>
-                        (!query.dateFrom.HasValue || e.eventDate >= query.dateFrom.Value) &&
-                        (!query.dateTo.HasValue || e.eventDate <= query.dateTo.Value)
+                        (!query.date_start.HasValue || e.eventDate >= query.date_start.Value) &&
+                        (!query.date_end.HasValue || e.eventDate <= query.date_end.Value) &&
+                        (!query.time_start.HasValue || e.eventDate >= query.time_start.Value) &&
+                        (!query.time_end.HasValue || e.eventDate <= query.time_end.Value)
                     ).ToListAsync();
 
                 events = _mapper.Map<List<GetEventDto>>(filteredEvents);

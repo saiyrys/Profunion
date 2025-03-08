@@ -567,7 +567,7 @@
         }
       }
     },
-    "/api/categories": {
+    "/api/category": {
       "post": {
         "tags": [
           "Category"
@@ -698,7 +698,7 @@
         }
       }
     },
-    "/api/categories/{categoryId}": {
+    "/api/category/{categoryId}": {
       "patch": {
         "tags": [
           "Category"
@@ -739,7 +739,7 @@
         }
       }
     },
-    "/api/categories/categoryId": {
+    "/api/category/categoryId": {
       "delete": {
         "tags": [
           "Category"
@@ -834,7 +834,7 @@
             }
           },
           {
-            "name": "dateFrom",
+            "name": "date_start",
             "in": "query",
             "schema": {
               "type": "string",
@@ -842,7 +842,23 @@
             }
           },
           {
-            "name": "dateTo",
+            "name": "date_end",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "time_start",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "time_end",
             "in": "query",
             "schema": {
               "type": "string",
@@ -1256,7 +1272,7 @@
             }
           },
           {
-            "name": "dateFrom",
+            "name": "date_start",
             "in": "query",
             "schema": {
               "type": "string",
@@ -1264,7 +1280,23 @@
             }
           },
           {
-            "name": "dateTo",
+            "name": "date_end",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "time_start",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "time_end",
             "in": "query",
             "schema": {
               "type": "string",
@@ -1582,6 +1614,68 @@
         }
       }
     },
+    "/api/news/viws/{newsId}": {
+      "post": {
+        "tags": [
+          "News"
+        ],
+        "parameters": [
+          {
+            "name": "newsId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/news/image": {
       "post": {
         "tags": [
@@ -1676,7 +1770,49 @@
         }
       }
     },
-    "/api/public/uploads/{fileName}": {
+    "/public/uploads/news/{fileName}": {
+      "get": {
+        "tags": [
+          "public"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/public/uploads/event/{fileName}": {
       "get": {
         "tags": [
           "public"

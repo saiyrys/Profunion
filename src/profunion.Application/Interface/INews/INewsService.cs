@@ -20,5 +20,6 @@ namespace profunion.Applications.Interface.INews
 
         Task<bool> DeleteNews(string newsId, CancellationToken cancellation);
 
+        Task<bool> IncrementationViews(string newsId);
     }
 }

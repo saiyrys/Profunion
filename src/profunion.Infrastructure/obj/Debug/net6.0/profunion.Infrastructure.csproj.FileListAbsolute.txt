@@ -10,7 +10,6 @@ C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\ne
 C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\profunion.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\profunion.Infrastructure.AssemblyInfo.cs
 C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\profunion.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\profunion.Infrastructure.sourcelink.json
 C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\profunio.C210C43E.Up2Date
 C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\profunion.Infrastructure.dll
 C:\Users\Павел\Desktop\Profunions\src\profunion.Infrastructure\obj\Debug\net6.0\refint\profunion.Infrastructure.dll

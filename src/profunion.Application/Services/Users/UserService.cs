@@ -78,6 +78,12 @@ namespace profunion.Applications.Services.Users
         {
             var currentUser = await _userRepository.GetByIdAsync(userId);
 
+            if (string.IsNullOrWhiteSpace(updateUser.password))
+            {
+                updateUser.password = null; // Это решит проблему
+            }
+
+
             await _update.UpdateEntity<User, UpdateUserDto, long>(userId, updateUser);
 
             if (!string.IsNullOrEmpty(updateUser.password) && !string.IsNullOrWhiteSpace(updateUser.password))
@@ -95,6 +101,7 @@ namespace profunion.Applications.Services.Users
 
             currentUser.updatedAt = DateTime.UtcNow;
 
+            
             if (!await _userRepository.UpdateAsync(currentUser))
             {
                 throw new ArgumentException("Ошибка при обновлении данных пользователя");

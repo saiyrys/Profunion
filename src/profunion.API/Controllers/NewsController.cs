@@ -71,6 +71,27 @@ namespace profunion.API.Controllers
 
         }
 
+        [HttpPost("viws/{newsId}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> IncrementNews(string newsId)
+        {
+
+            var result = await _newsService.IncrementationViews(newsId);
+
+            if (!result)
+            {
+                return StatusCode(418);
+            }
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(true);
+
+        }
+
         [HttpPatch("{newsId}")]
         [Authorize(Roles = "ADMIN, MODER")]
         [ProducesResponseType(204)]

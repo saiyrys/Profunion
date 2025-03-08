@@ -10,8 +10,11 @@ namespace profunion.Shared.Dto.Events
     {
         public string? search { get; set; }
 
-        public DateTime? dateFrom { get; set; }
-        public DateTime? dateTo { get; set; }
+        public DateTime? date_start { get; set; }
+        public DateTime? date_end { get; set; }
+
+        public DateTime? time_start { get; set; }
+        public DateTime? time_end { get; set; }
 
         public bool? isActive { get; set; }
 

@@ -77,7 +77,6 @@ C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\profun
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\profunion.API.AssemblyInfo.cs
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\profunion.API.csproj.CoreCompileInputs.cache
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\profunion.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\profunion.API.sourcelink.json
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\scopedcss\bundle\profunion.API.styles.css
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\staticwebassets.development.json

@@ -12,7 +12,6 @@ C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.
 C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\profunion.Applications.AssemblyInfoInputs.cache
 C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\profunion.Applications.AssemblyInfo.cs
 C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\profunion.Applications.csproj.CoreCompileInputs.cache
-C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\profunion.Applications.sourcelink.json
 C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\profunio.C5D347B9.Up2Date
 C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\profunion.Applications.dll
 C:\Users\Павел\Desktop\Profunions\src\profunion.Application\obj\Debug\net6.0\refint\profunion.Applications.dll
