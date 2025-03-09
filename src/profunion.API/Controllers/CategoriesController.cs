@@ -4,7 +4,6 @@ using profunion.Applications.Interface.ICategory;
 using profunion.Shared.Dto.Category;
 using profunion.Shared.Dto.Events;
 using SendGrid.Helpers.Errors.Model;
-using static Microsoft.IO.RecyclableMemoryStreamManager;
 
 namespace profunion.API.Controllers
 {

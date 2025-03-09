@@ -7,7 +7,7 @@
         public string? description { get; set; }
         public string organizer { get; set; }
 
-        public string eventDate { get; set; }
+        public DateTime date { get; set; }
 
         public List<string>? imagesId { get; set; }
 

@@ -10,11 +10,9 @@ namespace profunion.Shared.Dto.News
     {
         public string? search { get; set; }
 
-        public DateTime? date_start { get; set; }
-        public DateTime? date_end { get; set; }
+        public string? created_at_start { get; set; }
+        public string? created_at_end { get; set; }
 
-        public DateTime? time_start { get; set; }
-        public DateTime? time_end { get; set; }
     }
 
     public enum SortStateNews
@@ -22,6 +20,8 @@ namespace profunion.Shared.Dto.News
         Current,
         AlphabeticAsc,
         AlphabeticDesc,
+        ViewsAsc,
+        ViewsDesc,
         DateAsc,
         DateDesc,
     }

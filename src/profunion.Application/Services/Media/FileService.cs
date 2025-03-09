@@ -24,13 +24,14 @@ namespace profunion.Applications.Services.Media
             _fileRepository = fileRepository;
             _uploadPath = string.Empty;
         }
-        public async Task<(string id, string url)> WriteFile(IFormFile file, string fileType, CancellationToken cancellation)
+
+        public async Task<(string id, string filename, string url)> WriteFile(IFormFile file, string fileType, CancellationToken cancellation)
         {
             // определение пути хранения
-            var binDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var directory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
 
             // Определяем путь к папке uploads внутри bin
-            var sharedFolder = Path.Combine(binDirectory, "uploads");
+            var sharedFolder = Path.Combine(directory, "uploads");
 
             var uploadFolder = fileType switch
             {
@@ -71,9 +72,9 @@ namespace profunion.Applications.Services.Media
 
             string fileUrl = $"{baseUrl}{filename}";
 
-            Uri uri = new Uri(fileUrl);
+            Uri url = new Uri(fileUrl);
 
-            return (fileId, fileUrl);
+            return (fileId, filename, fileUrl);
         }
 
         public Task<string> OpenFile(string fileName)
@@ -81,6 +82,13 @@ namespace profunion.Applications.Services.Media
             var file = _fileRepository.GetFile(fileName);
 
             return file;
+        }
+
+        public async Task<bool> DeleteFile(string fileName)
+        {
+            var file = _fileRepository.DeleteFile(fileName);
+
+            return true;
         }
 
         public async Task<bool> DeleteEventFile(string eventId)

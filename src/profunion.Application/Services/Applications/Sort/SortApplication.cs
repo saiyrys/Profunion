@@ -15,6 +15,12 @@ namespace profunion.Applications.Services.Applications.Sort
                 case SortStateApplication.PlacesDesc:
                     application = application.OrderByDescending(a => a.places);
                     break;
+                case SortStateApplication.DateAsc:
+                    application = application.OrderBy(a => a.createdAt);
+                    break;
+                case SortStateApplication.DateDesc:
+                    application = application.OrderByDescending(a => a.createdAt);
+                    break;
                 default:
                     application = application.OrderBy(a => a.places);
                     break;

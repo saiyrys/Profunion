@@ -27,6 +27,20 @@
             }
           },
           {
+            "name": "created_at_start",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "created_at_end",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "sort",
             "in": "query",
             "schema": {
@@ -837,32 +851,28 @@
             "name": "date_start",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             }
           },
           {
             "name": "date_end",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             }
           },
           {
             "name": "time_start",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             }
           },
           {
             "name": "time_end",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             }
           },
           {
@@ -1167,14 +1177,14 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "file": {
+                  "image": {
                     "type": "string",
                     "format": "binary"
                   }
                 }
               },
               "encoding": {
-                "file": {
+                "image": {
                   "style": "form"
                 }
               }
@@ -1272,35 +1282,17 @@
             }
           },
           {
-            "name": "date_start",
+            "name": "created_at_start",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             }
           },
           {
-            "name": "date_end",
+            "name": "created_at_end",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "time_start",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "time_end",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             }
           },
           {
@@ -1614,7 +1606,7 @@
         }
       }
     },
-    "/api/news/viws/{newsId}": {
+    "/api/news/views/{newsId}": {
       "post": {
         "tags": [
           "News"
@@ -1687,14 +1679,14 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "file": {
+                  "image": {
                     "type": "string",
                     "format": "binary"
                   }
                 }
               },
               "encoding": {
-                "file": {
+                "image": {
                   "style": "form"
                 }
               }
@@ -1770,7 +1762,7 @@
         }
       }
     },
-    "/public/uploads/news/{fileName}": {
+    "/api/public/uploads/news/{fileName}": {
       "get": {
         "tags": [
           "public"
@@ -1812,7 +1804,7 @@
         }
       }
     },
-    "/public/uploads/event/{fileName}": {
+    "/api/public/uploads/event/{fileName}": {
       "get": {
         "tags": [
           "public"
@@ -1870,6 +1862,41 @@
           },
           {
             "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "created_at_start",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "created_at_end",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updated_at_start",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updated_at_end",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "role",
             "in": "query",
             "schema": {
               "type": "string"
@@ -2257,9 +2284,9 @@
             "type": "string",
             "nullable": true
           },
-          "eventDate": {
+          "date": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "imagesId": {
             "type": "array",
@@ -2345,11 +2372,11 @@
           },
           "createdAt": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "updatedAt": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "views": {
             "type": "integer",
@@ -2481,7 +2508,9 @@
         "enum": [
           0,
           1,
-          2
+          2,
+          3,
+          4
         ],
         "type": "integer",
         "format": "int32"
@@ -2492,7 +2521,9 @@
           1,
           2,
           3,
-          4
+          4,
+          5,
+          6
         ],
         "type": "integer",
         "format": "int32"
@@ -2501,7 +2532,11 @@
         "enum": [
           0,
           1,
-          2
+          2,
+          3,
+          4,
+          5,
+          6
         ],
         "type": "integer",
         "format": "int32"
@@ -2531,8 +2566,9 @@
             "type": "string",
             "nullable": true
           },
-          "eventDate": {
+          "date": {
             "type": "string",
+            "format": "date-time",
             "nullable": true
           },
           "imagesId": {
@@ -2635,19 +2671,19 @@
             "type": "string",
             "nullable": true
           },
-          "username": {
+          "userName": {
             "type": "string",
             "nullable": true
           },
-          "firstname": {
+          "firstName": {
             "type": "string",
             "nullable": true
           },
-          "middlename": {
+          "middleName": {
             "type": "string",
             "nullable": true
           },
-          "lastname": {
+          "lastName": {
             "type": "string",
             "nullable": true
           },

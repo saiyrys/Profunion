@@ -14,7 +14,9 @@ namespace profunion.Domain.Persistance
         Task<string> GetFile(string fileId);
         /*        Task<Uploads> GetFileByName(string fileName);*/
         Task<string> AddFileAsync(string filename, string filePath);
-      /*  Task DeleteUserFile(long userId, string fileId);*/
+        /*  Task DeleteUserFile(long userId, string fileId);*/
+
+        Task<bool> DeleteFile(string fileName);
         Task DeleteNewsFile(string newsId);
         Task DeleteEventFile(string eventId/*, string fileId*/);
 

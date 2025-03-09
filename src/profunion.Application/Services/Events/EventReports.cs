@@ -32,7 +32,7 @@ namespace profunion.Applications.Services.Events
                 foreach (var ev in events)
                 {
                     worksheet.Cells[row, 1].Value = ev.title;
-                    worksheet.Cells[row, 2].Value = ev.eventDate.ToString("dd.MM.yyyy HH:mm");
+                    worksheet.Cells[row, 2].Value = ev.date.ToString("dd.MM.yyyy HH:mm");
                     worksheet.Cells[row, 3].Value = ev.totalPlaces;
                     worksheet.Cells[row, 4].Formula = $"=C{row}-D{row}";
                     worksheet.Cells[row, 5].Value = ev.Places;

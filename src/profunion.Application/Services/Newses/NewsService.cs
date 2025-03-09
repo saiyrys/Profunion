@@ -60,17 +60,12 @@ namespace profunion.Applications.Services.Newses
                 newses = _sortNews.SortObject(newses, sort);
             }
 
-            if (query.date_start != null || query.date_end != null || query.time_start != null || query.time_end != null)
+            if (query.created_at_start != null || query.created_at_end != null)
             {
-                var filteredNews = await _context.Events
-                    .Where(e =>
-                        (!query.date_start.HasValue || e.eventDate >= query.date_start.Value) &&
-                        (!query.date_end.HasValue || e.eventDate <= query.date_end.Value) &&
-                        (!query.time_start.HasValue || e.eventDate >= query.time_start.Value) &&
-                        (!query.time_end.HasValue || e.eventDate <= query.time_end.Value)
-                ).ToListAsync();
-
-                newses = _mapper.Map<List<GetNewsDto>>(filteredNews);
+                newses = newses.Where(n =>
+                    (!string.IsNullOrEmpty(query.created_at_start) ? n.createdAt.Date >= DateTime.Parse(query.created_at_start).Date : true) &&
+                    (!string.IsNullOrEmpty(query.created_at_end) ? n.createdAt.Date <= DateTime.Parse(query.created_at_end).Date : true) 
+                ).ToList();
             }
 
            var paginationItem = await _pagination.Paginate(newses.ToList(), page);
@@ -172,8 +167,8 @@ namespace profunion.Applications.Services.Newses
                      description = n.description,
                      content = n.content,
                      views = n.views,
-                     createdAt = n.createdAt.ToString("yyyy-MM-dd"),
-                     updatedAt = n.updatedAt.ToString("yyyy-MM-dd"),
+                     createdAt = n.createdAt,
+                     updatedAt = n.updatedAt,
                      images = n.NewsUploads.Select(nu => new GetUploadsDto
                      {
                          id = nu.fileId,

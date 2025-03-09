@@ -31,7 +31,7 @@ namespace profunion.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(new { Items = newses, TotalPages = totalPages });
+            return Ok(new { Items = newses, countPage = totalPages });
         }
 
         [HttpGet("{newsId}")]
@@ -71,7 +71,7 @@ namespace profunion.API.Controllers
 
         }
 
-        [HttpPost("viws/{newsId}")]
+        [HttpPost("views/{newsId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
@@ -131,24 +131,23 @@ namespace profunion.API.Controllers
             return Ok("Новость успешно удалена");
         }
 
-
-
         [HttpPost("image")]
         [Authorize(Roles = "ADMIN, MODER")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> CreateImageNews(IFormFile file, CancellationToken cancellation)
+        public async Task<IActionResult> CreateImageNews(IFormFile image, CancellationToken cancellation)
         {
-            if (file == null)
+            if (image == null)
             {
                 return BadRequest();
             }
 
-            (string Id, string Url) = await _fileService.WriteFile(file, "News", cancellation);
+            (string Id,string filename, string Url) = await _fileService.WriteFile(image, "News", cancellation);
 
             var result = new
             {
                 id = Id,
+                name = filename,
                 url = Url
             };
 
@@ -162,25 +161,20 @@ namespace profunion.API.Controllers
 
             return Ok(result);
         }
-
-       
+               
         [HttpDelete("image/{fileName}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteImage(string fileName)
         {
-            var filePath = await _fileService.OpenFile(fileName);
+            var filePath = await _fileService.DeleteFile(fileName);
 
-            if (filePath != null)
-            {
-                var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-
-                return File(fileStream, "image/png");
-            }
-            else
+            if (filePath == null)
             {
                 return BadRequest("File not found");
             }
+
+            return Ok(true);
         }
     }
 }

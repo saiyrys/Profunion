@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using profunion.Applications.Interface.IApplications;
 using profunion.Domain.Models.ApplicationModels;
+using profunion.Domain.Models.NewsModels;
 using profunion.Domain.Persistance;
 using profunion.Shared.Common.Interfaces;
 using profunion.Shared.Common.Service;
@@ -32,7 +33,6 @@ namespace profunion.Applications.Services.Applications
             }
 
             return true;
-
         }
 
         public async Task<(IEnumerable<GetApplicationDto>, int TotalPages)> GetApplication(int page, ApplicationQueryDto query, SortStateApplication sort)
@@ -49,6 +49,14 @@ namespace profunion.Applications.Services.Applications
             if (sort != SortStateApplication.Current)
             {
                 applicationsDto = _sortApplication.SortObject(applicationsDto, sort);
+            }
+
+            if (query.created_at_start != null || query.created_at_end != null)
+            {
+                applicationsDto = applicationsDto.Where(n =>
+                    (!string.IsNullOrEmpty(query.created_at_start) ? n.createdAt.Date >= DateTime.Parse(query.created_at_start).Date : true) &&
+                    (!string.IsNullOrEmpty(query.created_at_end) ? n.createdAt.Date <= DateTime.Parse(query.created_at_end).Date : true) 
+                ).ToList();
             }
 
             var paginate = await _pagination.Paginate(applicationsDto, page);

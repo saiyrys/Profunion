@@ -1,10 +1,7 @@
-﻿using profunion.Domain.Models.UploadModel;
-using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using profunion.Domain.Models.UploadModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace profunion.Domain.Models.EventModels
 {
@@ -22,7 +19,7 @@ namespace profunion.Domain.Models.EventModels
         public string title { get; set; }
         public string description { get; set; }
         public string organizer { get; set; }
-        public DateTime eventDate { get; set; }
+        public DateTime date { get; set; }
         public string link { get; set; }
         public int totalPlaces { get; set; }
         public int Places { get; set; }
@@ -39,4 +36,6 @@ namespace profunion.Domain.Models.EventModels
         public virtual ICollection<EventUploads> EventUploads { get; set; }
 
     }
+
+    
 }

@@ -3,7 +3,7 @@ using profunion.Applications.Interface.IFiles;
 
 namespace profunion.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class publicController : Controller
     {

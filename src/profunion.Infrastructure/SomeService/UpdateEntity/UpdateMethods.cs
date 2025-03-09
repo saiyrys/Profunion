@@ -23,6 +23,7 @@ namespace profunion.Infrastructure.SomeService.UpdateEntity
             where TUpdateDto : class
         {
             var updateModel = await _context.Set<TEntity>().FindAsync(id);
+
             if (updateModel == null)
                 throw new ArgumentException($"{typeof(TEntity).Name} does not exist");
 

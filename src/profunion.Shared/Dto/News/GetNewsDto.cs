@@ -16,8 +16,8 @@ namespace profunion.Shared.Dto.News
         public string description { get; set; }
         public string content { get; set; }
         public List<GetUploadsDto> images { get; set; }
-        public string createdAt { get; set; }
-        public string updatedAt { get; set; }
+        public DateTime createdAt { get; set; }
+        public DateTime updatedAt { get; set; }
         public int views { get; set; }
 
         public IEnumerable<string> GetSearchableFields()

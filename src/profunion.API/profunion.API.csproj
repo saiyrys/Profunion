@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\installers\" />
+    <Folder Include="wwwroot\uploads\uploads\" />
   </ItemGroup>
 
 </Project>

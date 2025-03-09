@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using profunion.Applications.Interface.IEvents.IService;
 using profunion.Domain.Models.EventModels;
+using profunion.Domain.Models.NewsModels;
 using profunion.Domain.Persistance;
 using profunion.Infrastructure.Data;
 using profunion.Infrastructure.Persistance.Repository;
@@ -65,6 +66,13 @@ namespace profunion.Applications.Services.Events
 
         public async Task<bool> UpdateEvents(string eventId, UpdateEventDto? updateEvent, CancellationToken cancellation)
         {
+            var eventDate = updateEvent.date.ToString();
+
+            if (string.IsNullOrWhiteSpace(eventDate))
+            {
+                eventDate = null; 
+            }
+
             await _update.UpdateEntity<Event, UpdateEventDto, string>(eventId, updateEvent);
 
             if (updateEvent.categoriesId != null && updateEvent.categoriesId.Any())
@@ -72,38 +80,28 @@ namespace profunion.Applications.Services.Events
                 var eventCategories = _context.EventCategories.Where(ec => ec.eventId == eventId).ToList();
                 _context.EventCategories.RemoveRange(eventCategories);
 
-                foreach (var categoryId in updateEvent.categoriesId)
+                var newCategories = updateEvent.categoriesId.Select(categoryId => new EventCategories
                 {
-                    _context.EventCategories.Add(new EventCategories
-                    {
-                        eventId = eventId,
-                        CategoriesId = categoryId
-                    });
-                }
+                    eventId = eventId,
+                    CategoriesId = categoryId
+                });
+
+                _context.EventCategories.AddRange(newCategories);
             }
 
+            // Удаляем старые фото перед добавлением новых
             if (updateEvent.imagesId != null && updateEvent.imagesId.Any())
             {
-                var eventUploads = _context.EventUploads.Where(eu => eu.eventId == eventId).ToList();
-                _context.EventUploads.RemoveRange(eventUploads);
+                var existingUploads = _context.EventUploads.Where(eu => eu.eventId == eventId).ToList();
+                _context.EventUploads.RemoveRange(existingUploads);
 
-                foreach (var uploadId in updateEvent.imagesId)
+                var newUploads = updateEvent.imagesId.Select(uploadId => new EventUploads
                 {
-                    _context.EventUploads.Add(new EventUploads
-                    {
-                        eventId = eventId,
-                        fileId = uploadId
-                    });
-                }
+                    eventId = eventId,
+                    fileId = uploadId
+                });
 
-                /*foreach (var uploadId in updateEvent.imagesId)
-                {
-                    _context.EventUploads.Add(new EventUploads
-                    {
-                        eventId = eventId,
-                        fileId = uploadId
-                    });
-                }*/
+                _context.EventUploads.AddRange(newUploads);
             }
 
             await _context.SaveChangesAsync();
@@ -135,7 +133,5 @@ namespace profunion.Applications.Services.Events
 
             return true;
         }
-
-
-        }
+    }
 }

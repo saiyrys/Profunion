@@ -28,7 +28,7 @@ namespace profunion.API.Controllers
 
         // Пути на работу с ивентами
         [HttpGet]
-        [Authorize]
+     /*   [Authorize]*/
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
@@ -40,7 +40,7 @@ namespace profunion.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(new { Items = events, TotalPages = totalPages });
+            return Ok(new { Items = events, countPage = totalPages });
         }
 
         [HttpGet("{eventId}")]
@@ -79,7 +79,7 @@ namespace profunion.API.Controllers
                 foreach (var ev in events)
                 {
                     worksheet.Cells[row, 1].Value = ev.title;
-                    worksheet.Cells[row, 2].Value = ev.eventDate.ToString("dd.MM.yyyy HH:mm");
+                    worksheet.Cells[row, 2].Value = ev.date.ToString("dd.MM.yyyy HH:mm");
                     worksheet.Cells[row, 3].Value = ev.organizer;
                     worksheet.Cells[row, 4].Value = ev.totalPlaces;
                     worksheet.Cells[row, 5].Formula = $"=D{row}-F{row}";
@@ -169,18 +169,19 @@ namespace profunion.API.Controllers
         [Authorize(Roles = "ADMIN, MODER")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> CreateImageEvents(IFormFile file, CancellationToken cancellation)
+        public async Task<IActionResult> CreateImageEvents(IFormFile image, CancellationToken cancellation)
         {
-            if (file == null)
+            if (image == null)
             {
                 return BadRequest();
             }
 
-            (string Id, string Url) = await _fileService.WriteFile(file, "Event", cancellation);
+            (string Id,string filename, string Url) = await _fileService.WriteFile(image, "Event", cancellation);
 
             var result = new
             {
                 id = Id,
+                name = filename,
                 url = Url
             };
 
@@ -196,22 +197,18 @@ namespace profunion.API.Controllers
         }
 
         [HttpDelete("image/{fileName}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(200)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteImage(string fileName)
         {
-            var filePath = await _fileService.OpenFile(fileName);
+            var filePath = await _fileService.DeleteFile(fileName);
 
-            if (filePath != null)
-            {
-                var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            if (filePath == null)
+                return BadRequest();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                return File(fileStream, "image/png");
-            }
-            else
-            {
-                return BadRequest("File not found");
-            }
+            return Ok(true);
         }
     }
 }

@@ -10,11 +10,11 @@ namespace profunion.Shared.Dto.Events
     {
         public string? search { get; set; }
 
-        public DateTime? date_start { get; set; }
-        public DateTime? date_end { get; set; }
+        public string? date_start { get; set; }
+        public string? date_end { get; set; }
 
-        public DateTime? time_start { get; set; }
-        public DateTime? time_end { get; set; }
+        public string? time_start { get; set; }
+        public string? time_end { get; set; }
 
         public bool? isActive { get; set; }
 
@@ -26,9 +26,9 @@ namespace profunion.Shared.Dto.Events
         Current,
         AlphabeticAsc,
         AlphabeticDesc,
-        DateAsc,
-        DateDesc,
         PlacesAsc,
-        PlacesDesc
+        PlacesDesc, 
+        DateAsc,
+        DateDesc
     }
 }

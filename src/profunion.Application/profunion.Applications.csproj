@@ -22,8 +22,4 @@
     <ProjectReference Include="..\profunion.Shared\profunion.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\Common\" />
-  </ItemGroup>
-
 </Project>

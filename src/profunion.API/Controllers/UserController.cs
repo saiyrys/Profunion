@@ -39,7 +39,7 @@ namespace profunion.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(new { Items = users, TotalPages = totalPages });
+            return Ok(new { Items = users, countPage = totalPages });
 
         }
 

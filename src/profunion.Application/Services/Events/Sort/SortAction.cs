@@ -20,11 +20,17 @@ namespace profunion.Applications.Services.Events.Sort
                 case SortState.AlphabeticDesc:
                     events = events.OrderByDescending(e => e.title);
                     break;
+                case SortState.PlacesAsc:
+                    events = events.OrderBy(e => e.places);
+                    break;
+                case SortState.PlacesDesc:
+                    events = events.OrderByDescending(e => e.places);
+                    break;
                 case SortState.DateAsc:
-                    events = events.OrderBy(e => e.eventDate);
+                    events = events.OrderBy(e => e.date);
                     break;
                 case SortState.DateDesc:
-                    events = events.OrderByDescending(e => e.eventDate);
+                    events = events.OrderByDescending(e => e.date);
                     break;
                 default:
                     events = events.OrderBy(e => e.title);

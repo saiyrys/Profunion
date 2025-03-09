@@ -27,7 +27,6 @@ namespace profunion.Applications.Services.Events
         {
             _repository = repository;
             _mapper = mapper;
-
             _sortAction = sortAction;
             _pagination = pagination;
             _configuration = configuration;
@@ -51,15 +50,12 @@ namespace profunion.Applications.Services.Events
 
             if(query.date_start != null || query.date_end != null || query.time_start != null || query.time_end != null)
             {
-                var filteredEvents = await _context.Events
-                    .Where(e =>
-                        (!query.date_start.HasValue || e.eventDate >= query.date_start.Value) &&
-                        (!query.date_end.HasValue || e.eventDate <= query.date_end.Value) &&
-                        (!query.time_start.HasValue || e.eventDate >= query.time_start.Value) &&
-                        (!query.time_end.HasValue || e.eventDate <= query.time_end.Value)
-                    ).ToListAsync();
-
-                events = _mapper.Map<List<GetEventDto>>(filteredEvents);
+                events = events.Where(e =>
+                    (!string.IsNullOrEmpty(query.date_start) ? e.date.Date >= DateTime.Parse(query.date_start).Date : true) &&
+                    (!string.IsNullOrEmpty(query.date_end) ? e.date.Date <= DateTime.Parse(query.date_end).Date : true) &&
+                    (!string.IsNullOrEmpty(query.time_start) ? e.date.TimeOfDay >= DateTime.Parse(query.time_start).TimeOfDay : true) &&
+                    (!string.IsNullOrEmpty(query.time_end) ? e.date.TimeOfDay <= DateTime.Parse(query.time_end).TimeOfDay : true)
+                ).ToList();
             }
 
             var paginationItem = await _pagination.Paginate(events.ToList(), page);
@@ -83,7 +79,7 @@ namespace profunion.Applications.Services.Events
 
         private async Task<IEnumerable<GetEventDto>> GetFullEventData()
         {
-            var baseUrl = _configuration["BaseUrl"];
+            var baseUrl = _configuration["EventUrl"];
             var events = await _context.Events
                 .Include(e => e.EventCategories)
                     .ThenInclude(ec => ec.Categories)
@@ -95,7 +91,7 @@ namespace profunion.Applications.Services.Events
                      title = e.title,
                      description = e.description,
                      organizer = e.organizer,
-                     eventDate = e.eventDate.ToString("yyyy-MM-dd HH:mm"),
+                     date = e.date,
                      link = e.link,
                      places = e.Places,
                      isActive = e.isActive,

@@ -49,9 +49,24 @@ namespace profunion.Applications.Services.Users
                 userDto = await Search<GetUserDto>.SearchEntities(userDto, query.search);
             }
 
+            if (!string.IsNullOrEmpty(query.role))
+            {
+                userDto = userDto.Where(u => u.role == query.role.ToUpper());
+            }
+
             if (sort != SortStateUser.Current)
             {
                 userDto = _sortUser.SortObject(userDto, sort);
+            }
+
+            if (query.created_at_start != null || query.created_at_end != null || query.updated_at_start != null || query.updated_at_end != null )
+            {
+                userDto = userDto.Where(n =>
+                    (!string.IsNullOrEmpty(query.created_at_start) ? n.createdAt.Date >= DateTime.Parse(query.created_at_start).Date : true) &&
+                    (!string.IsNullOrEmpty(query.created_at_end) ? n.createdAt.Date <= DateTime.Parse(query.created_at_end).Date : true) &&
+                    (!string.IsNullOrEmpty(query.updated_at_start) ? n.updatedAt.Date >= DateTime.Parse(query.updated_at_start).Date  : true) &&
+                    (!string.IsNullOrEmpty(query.updated_at_end) ? n.updatedAt.Date <= DateTime.Parse(query.updated_at_end).Date : true)
+                ).ToList();
             }
 
             var pagination = await _pagination.Paginate(userDto, page);

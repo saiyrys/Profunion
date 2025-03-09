@@ -111,6 +111,31 @@ namespace profunion.Infrastructure.Persistance.Repository
             await _context.SaveChangesAsync();
         }
 
+        public async Task<bool> DeleteFile(string fileName)
+        {
+            var upload = _context.Uploads.FirstOrDefault(u => u.fileName == fileName);
+            if (upload == null) return false;  // Если файл не найден, выходим
+
+            var filePath = upload.filePath;
+
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+
+            // Получаем ID файла
+            var fileId = upload.id;
+
+            // Удаляем связи в промежуточных таблицах
+            _context.NewsUploads.RemoveRange(_context.NewsUploads.Where(nu => nu.fileId == fileId));
+            _context.EventUploads.RemoveRange(_context.EventUploads.Where(eu => eu.fileId == fileId));
+
+            // Удаляем сам файл из Uploads
+            _context.Uploads.Remove(upload);
+
+            return await SaveUploads();
+        }
+
 
         public async Task DeleteEventFile(string eventId)
         {

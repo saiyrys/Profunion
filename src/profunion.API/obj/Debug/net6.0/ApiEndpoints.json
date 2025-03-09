@@ -18,6 +18,16 @@
         "IsRequired": false
       },
       {
+        "Name": "created_at_start",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "created_at_end",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "sort",
         "Type": "profunion.Shared.Dto.Application.SortStateApplication",
         "IsRequired": false
@@ -522,22 +532,22 @@
       },
       {
         "Name": "date_start",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "date_end",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "time_start",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "time_end",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -729,7 +739,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "file",
+        "Name": "image",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
@@ -811,23 +821,13 @@
         "IsRequired": false
       },
       {
-        "Name": "date_start",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "created_at_start",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "date_end",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "time_start",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "time_end",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "created_at_end",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -1022,7 +1022,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "file",
+        "Name": "image",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
@@ -1078,7 +1078,7 @@
   {
     "ContainingType": "profunion.API.Controllers.NewsController",
     "Method": "IncrementNews",
-    "RelativePath": "api/news/viws/{newsId}",
+    "RelativePath": "api/news/views/{newsId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -1116,6 +1116,68 @@
     ]
   },
   {
+    "ContainingType": "profunion.API.Controllers.publicController",
+    "Method": "GetImageEvent",
+    "RelativePath": "api/public/uploads/event/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.publicController",
+    "Method": "GetImageNews",
+    "RelativePath": "api/public/uploads/news/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "profunion.API.Controllers.UserController",
     "Method": "GetUsersByAdmin",
     "RelativePath": "api/users",
@@ -1130,6 +1192,31 @@
       },
       {
         "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "created_at_start",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "created_at_end",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "updated_at_start",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "updated_at_end",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "role",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -1342,67 +1429,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "profunion.API.Controllers.publicController",
-    "Method": "GetImageEvent",
-    "RelativePath": "public/uploads/event/{fileName}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "fileName",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "profunion.API.Controllers.publicController",
-    "Method": "GetImageNews",
-    "RelativePath": "public/uploads/news/{fileName}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "fileName",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
   }
 ]

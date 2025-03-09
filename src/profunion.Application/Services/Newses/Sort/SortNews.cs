@@ -16,6 +16,12 @@ namespace profunion.Applications.Services.Newses.Sort
                 case SortStateNews.AlphabeticDesc:
                     news = news.OrderByDescending(n => n.title);
                     break;
+                case SortStateNews.ViewsAsc:
+                    news = news.OrderBy(n => n.views);
+                    break;
+                case SortStateNews.ViewsDesc:
+                    news = news.OrderByDescending(n => n.views);
+                    break;
                 case SortStateNews.DateAsc:
                     news = news.OrderBy(n => n.createdAt);
                     break;
