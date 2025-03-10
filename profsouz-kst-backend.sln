@@ -15,6 +15,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "profunion.Applications", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "profunion.API", "src\profunion.API\profunion.API.csproj", "{7586BE06-89D6-47B8-BD5F-FE46C102F168}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{39B3747F-77A0-420B-894B-9B0AA57054C5}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{CF769B50-6760-48EA-9FF9-6C3AEB1EE065}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Documents\dumps\profunion_db.sql = ..\..\Documents\dumps\profunion_db.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +61,7 @@ Global
 		{608FDD45-CE84-44A7-BFD5-D72E2683EFEB} = {4785149F-55CE-4C4A-8CF2-684D0C13F642}
 		{4C532392-ACB8-431C-AD72-8A9B71D95E64} = {4785149F-55CE-4C4A-8CF2-684D0C13F642}
 		{7586BE06-89D6-47B8-BD5F-FE46C102F168} = {4785149F-55CE-4C4A-8CF2-684D0C13F642}
+		{CF769B50-6760-48EA-9FF9-6C3AEB1EE065} = {39B3747F-77A0-420B-894B-9B0AA57054C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FF4E78D-5E91-428D-8610-8B74548DD335}

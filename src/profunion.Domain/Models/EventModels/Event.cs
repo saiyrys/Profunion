@@ -24,7 +24,7 @@ namespace profunion.Domain.Models.EventModels
         public int totalPlaces { get; set; }
         public int Places { get; set; }
         public bool isActive { get; set; }
-        public bool status { get; set; }
+        public string status { get; set; }
         public DateTime createdAt { get; set; }
         public DateTime updatedAt { get; set; }
 

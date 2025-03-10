@@ -159,6 +159,8 @@ namespace profunion.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            await Task.Delay(1000);
+
             return Ok(result);
         }
                

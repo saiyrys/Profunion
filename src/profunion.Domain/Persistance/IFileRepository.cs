@@ -13,7 +13,7 @@ namespace profunion.Domain.Persistance
         Task<Uploads> GetFiles();
         Task<string> GetFile(string fileId);
         /*        Task<Uploads> GetFileByName(string fileName);*/
-        Task<string> AddFileAsync(string filename, string filePath);
+        Task<string> AddFileAsync(string fileId, string filename, string filePath);
         /*  Task DeleteUserFile(long userId, string fileId);*/
 
         Task<bool> DeleteFile(string fileName);

@@ -25,6 +25,11 @@ namespace profunion.Applications.Services.Applications
         }
         public async Task<bool> CreateApplication(CreateApplicationDto createApplication)
         {
+            if (createApplication == null)
+            {
+                throw new ArgumentException("поля не монут быть пустым");
+            }
+
             var application = _mapper.Map<Application>(createApplication);
 
             if (!await _applicationRepository.CreateEntityAsync(application))

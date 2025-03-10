@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wZVOoKU3z+cE9Ke2+b0cKkApst079prm4xyvZ6fjaGo=",
+  "Hash": "51N4j82XJos4234HJoYePA48EjSuv5n8+6t+UMnLZNo=",
   "Source": "profunion.API",
   "BasePath": "_content/profunion.API",
   "Mode": "Default",
@@ -36,6 +36,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\installers\\profunion-v1.0.0-setup.exe"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\EventUploads\\416ad02d-4db7-471f-9c63-2915a220e8d0.png",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oa3xwk0z69",
+      "Integrity": "EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\uploads\\EventUploads\\416ad02d-4db7-471f-9c63-2915a220e8d0.png"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\EventUploads\\82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uw0xqpbluw",
+      "Integrity": "Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\uploads\\EventUploads\\82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\NewsUploads\\b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "al8y5grnpf",
+      "Integrity": "/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\uploads\\NewsUploads\\b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png"
     }
   ],
   "Endpoints": [
@@ -118,6 +181,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-WeGR0GSexro6SOL9oYwZ+VXO5ttF4OaIPHWrsxjXSHs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.oa3xwk0z69.png",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\EventUploads\\416ad02d-4db7-471f-9c63-2915a220e8d0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 08:51:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oa3xwk0z69"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\EventUploads\\416ad02d-4db7-471f-9c63-2915a220e8d0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 08:51:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\EventUploads\\82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95132"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 08:52:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.uw0xqpbluw.png",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\EventUploads\\82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95132"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 08:52:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uw0xqpbluw"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.al8y5grnpf.png",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\NewsUploads\\b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1588633"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 09:23:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "al8y5grnpf"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\uploads\\uploads\\NewsUploads\\b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1588633"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 09:23:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc="
         }
       ]
     }

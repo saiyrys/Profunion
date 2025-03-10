@@ -43,11 +43,11 @@ namespace profunion.Infrastructure.Persistance.Repository
              throw new NotImplementedException();
          }*/
 
-        public async Task<string> AddFileAsync(string filename, string filePath)
+        public async Task<string> AddFileAsync(string fileId, string filename, string filePath)
         {
             var uploadedFile = new Uploads
             {
-                id = Guid.NewGuid().ToString(),
+                id = fileId,
                 fileName = filename,
                 filePath = filePath
             };

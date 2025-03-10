@@ -115,18 +115,16 @@ namespace profunion.Applications.Services.Newses
 
             if (updateNews.imagesId != null && updateNews.imagesId.Any())
             {
-               /* var newsUploads = _context.NewsUploads.Where(nu => nu.newsId == newsId).ToList();
-                _context.NewsUploads.RemoveRange(newsUploads);*/
-                await _fileRepository.DeleteNewsFile(newsId);
+                var existingUploads = _context.NewsUploads.Where(nu => nu.newsId== newsId).ToList();
+                _context.NewsUploads.RemoveRange(existingUploads);
 
-                foreach (var uploadId in updateNews.imagesId)
+                var newsUploads = updateNews.imagesId.Select(uploadId => new NewsUploads
                 {
-                    _context.NewsUploads.Add(new NewsUploads
-                    {
-                        newsId = newsId,
-                        fileId = uploadId
-                    });
-                }
+                    newsId = newsId,
+                    fileId = uploadId
+                });
+
+                _context.NewsUploads.AddRange(newsUploads);
             }
 
             await _context.SaveChangesAsync();

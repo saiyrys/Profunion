@@ -11,7 +11,7 @@
         public List<string>? categoriesId { get; set; }
         public int? totalPlaces { get; set; }
         public bool? isActive { get; set; }
-        public bool? status { get; set; }
+        public string? status { get; set; }
 
     }
 }

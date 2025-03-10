@@ -7,13 +7,9 @@ using profunion.Domain.Persistance;
 using profunion.Infrastructure.Data;
 using profunion.Infrastructure.Persistance.Repository;
 using profunion.Shared.Common.Interfaces;
+using profunion.Shared.Common.Service;
 using profunion.Shared.Dto.Category;
-using profunion.Shared.Dto.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace profunion.Applications.Services.Category
 {
@@ -46,16 +42,20 @@ namespace profunion.Applications.Services.Category
             return true;
 
         }
-        public async Task<(IEnumerable<CategoriesDto>, int TotalPages)> GetAllCategories(int page)
+        public async Task<(IEnumerable<CategoriesDto>, int TotalPages)> GetAllCategories(int page, string? search)
         {
             int items = 18;
 
             var categories = await _categoryRepository.GetAllAsync();
-
             var categoriesDto = _mapper.Map<IEnumerable<CategoriesDto>>(categories);
 
+            if(!string.IsNullOrEmpty(search))
+            {
+                categoriesDto = await Search<CategoriesDto>.SearchEntities(categoriesDto, search);
+            }
+
             if (categories is null)
-                throw new ArgumentNullException("Categories not find");
+                throw new ArgumentNullException("Categories not found");
 
             var pagianteItem = await _pagination.Paginate(categoriesDto, page);
             categoriesDto = pagianteItem.Items;

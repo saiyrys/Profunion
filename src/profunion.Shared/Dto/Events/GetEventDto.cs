@@ -16,7 +16,7 @@ namespace profunion.Shared.Dto.Events
         public string link { get; set; }
         public ICollection<CategoriesDto> categories { get; set; }
         public bool isActive { get; set; }
-        public bool status { get; set; }
+        public string status { get; set; }
         public int places { get; set; }
         public string createdAt { get; set; }
         public string updatedAt { get; set; }

@@ -43,6 +43,7 @@ namespace profunion.Applications.Services.Events
                 events = await Search<GetEventDto>.SearchEntities(events, query.search);
             }
 
+
             if (sort != SortState.Current)
             {
                 events = _sortAction.SortObject(events, sort);
@@ -56,6 +57,11 @@ namespace profunion.Applications.Services.Events
                     (!string.IsNullOrEmpty(query.time_start) ? e.date.TimeOfDay >= DateTime.Parse(query.time_start).TimeOfDay : true) &&
                     (!string.IsNullOrEmpty(query.time_end) ? e.date.TimeOfDay <= DateTime.Parse(query.time_end).TimeOfDay : true)
                 ).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(query.status))
+            {
+                events = events.Where(e => e.status == query.status.ToUpper());
             }
 
             var paginationItem = await _pagination.Paginate(events.ToList(), page);

@@ -56,7 +56,7 @@ namespace profunion.API.Controllers
 
         // Генерация отчета по ивентам
         [HttpGet("report")]
-        [Authorize(Roles = "ADMIN, MODER")]
+       /* [Authorize(Roles = "ADMIN, MODER")]*/
         public async Task<IActionResult> GetEventsStatusReport()
         {
             var events = await _eventRepository.GetAllAsync(); // Получаем список мероприятий
@@ -93,7 +93,8 @@ namespace profunion.API.Controllers
                 package.SaveAs(stream);
                 stream.Position = 0;
 
-                var fileName = $"Отчёт по мероприятиям {DateTime.Now:yyyy:MM:dd:HH:mm}.xlsx";
+                var fileName = $"event_report_{DateTime.Now:yyyy_MM_dd_HH_mm}.xlsx";
+
                 return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
             }
         }
@@ -166,7 +167,7 @@ namespace profunion.API.Controllers
 
         // Работа с фотографиями ивентов
         [HttpPost("image")]
-        [Authorize(Roles = "ADMIN, MODER")]
+        /*[Authorize(Roles = "ADMIN, MODER")]*/
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> CreateImageEvents(IFormFile image, CancellationToken cancellation)
@@ -192,6 +193,8 @@ namespace profunion.API.Controllers
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
+            await Task.Delay(1000);
 
             return Ok(result);
         }

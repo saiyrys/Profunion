@@ -18,7 +18,7 @@ namespace profunion.Shared.Dto.Events
 
         public bool? isActive { get; set; }
 
-        public bool? status { get; set; }
+        public string? status { get; set; }
     }
 
     public enum SortState

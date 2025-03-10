@@ -12,7 +12,7 @@ namespace profunion.Applications.Interface.ICategory
     {
         Task<bool> CreateCategories(CreateCategoriesDto category);
 
-        Task<(IEnumerable<CategoriesDto>, int TotalPages)> GetAllCategories(int page);
+        Task<(IEnumerable<CategoriesDto>, int TotalPages)> GetAllCategories(int page, string? search);
 
         Task<CategoriesDto> GetCategory(string id);
 

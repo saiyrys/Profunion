@@ -44,7 +44,7 @@ namespace profunion.Applications.Services.Auth
             var user = await _control.FindByNameAsync(loginUser.userName);
             
             if (user == null || !await ValidatePassword(loginUser.password, user.password, user.salt))
-                throw new BadRequestException();
+                throw new BadRequestException("Неправильный логин или пароль");
             
             var userDto = _mapper.Map<UserInfoDto>(user);
 

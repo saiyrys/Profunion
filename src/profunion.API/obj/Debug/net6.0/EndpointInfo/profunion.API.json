@@ -663,6 +663,13 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -751,9 +758,7 @@
             "description": "No Content"
           }
         }
-      }
-    },
-    "/api/category/categoryId": {
+      },
       "delete": {
         "tags": [
           "Category"
@@ -761,7 +766,8 @@
         "parameters": [
           {
             "name": "categoryId",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -886,7 +892,7 @@
             "name": "status",
             "in": "query",
             "schema": {
-              "type": "boolean"
+              "type": "string"
             }
           },
           {
@@ -2307,14 +2313,17 @@
             "nullable": true
           },
           "isActive": {
-            "type": "boolean"
+            "type": "boolean",
+            "nullable": true
           },
           "status": {
-            "type": "boolean"
+            "type": "string",
+            "nullable": true
           },
           "places": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2599,7 +2608,7 @@
             "nullable": true
           },
           "status": {
-            "type": "boolean",
+            "type": "string",
             "nullable": true
           }
         },

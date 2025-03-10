@@ -41,12 +41,12 @@ namespace profunion.API.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> GetAll(int page)
+        public async Task<IActionResult> GetAll(int page, string? search)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var (categories, totalPages) = await _category.GetAllCategories(page);
+            var (categories, totalPages) = await _category.GetAllCategories(page, search);
 
             return Ok(categories);
         }
@@ -73,7 +73,7 @@ namespace profunion.API.Controllers
             }
         }
 
-        [HttpDelete("categoryId")]
+        [HttpDelete("{categoryId}")]
         [Authorize(Roles = "ADMIN, MODER")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]

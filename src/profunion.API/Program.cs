@@ -36,6 +36,8 @@ using profunion.Applications.Interface.INews;
 using profunion.Applications.Services.Newses;
 using profunion.Applications.Services.Newses.Sort;
 using profunion.Applications.Services.Applications.Sort;
+using profunion.API;
+using profunion.API.Background;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -80,6 +82,8 @@ builder.Services.AddScoped<ISortNews, SortNews>();
 //Зависимости для Медиа
 builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddSingleton<AddFileQueue>();
+builder.Services.AddHostedService<AddFileService>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -101,7 +105,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection"), o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
     options.ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.MultipleCollectionIncludeWarning));
-});
+}, ServiceLifetime.Scoped);
 
 builder.Services.AddScoped<IUpdateMethods, UpdateMethods>();
 builder.Services.AddEndpointsApiExplorer();
@@ -158,6 +162,8 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 app.UseCors("AllowSpecificOrigins");
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

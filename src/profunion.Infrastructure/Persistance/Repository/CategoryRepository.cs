@@ -14,12 +14,14 @@ namespace profunion.Infrastructure.Persistance.Repository
     public class CategoryRepository : ICategoryRepository
     {
         private readonly ApplicationDbContext _context;
+        private readonly IFileRepository _fileRepository;
         private readonly DbSet<Categories> _dbSet;
 
-        public CategoryRepository(ApplicationDbContext context)
+        public CategoryRepository(ApplicationDbContext context, IFileRepository fileRepository)
         {
             _context = context;
             _dbSet = context.Set<Categories>();
+            _fileRepository = fileRepository;
         }
 
         public async Task<Categories> GetByIdAsync(string id) => await _dbSet.FindAsync(id);
@@ -65,6 +67,7 @@ namespace profunion.Infrastructure.Persistance.Repository
                 {
                     if (!await _context.EventCategories.AnyAsync(ec => ec.eventId == delete.eventId))
                     {
+                        await _fileRepository.DeleteEventFile(delete.eventId);
                         _context.Events.Remove(delete);
                     }
                 }

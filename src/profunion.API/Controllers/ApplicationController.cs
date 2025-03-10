@@ -90,7 +90,10 @@ namespace profunion.API.Controllers
                 package.SaveAs(stream);
                 stream.Position = 0;
 
-                var fileName = $"Отчёт по участникам {DateTime.Now:yyyy:MM:dd:HH:mm}.xlsx";
+                var fileName = $"application_report_{DateTime.Now:yyyy:MM:dd:HH:mm}.xlsx";
+               /* Response.Headers["Content-Disposition"] = $"attachment; filename=\"{fileName}\"";
+                Response.Headers["Content-Type"] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";*/
+
                 return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
             }
         }

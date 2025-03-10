@@ -15,7 +15,5 @@ namespace profunion.Applications.Interface.IFiles
 
         Task<bool> DeleteFile(string fileName);
         /* Task<bool> DeleteUserFile(long userId, string fileName);*/
-
-        Task<bool> DeleteEventFile(string eventId);
     }
 }
