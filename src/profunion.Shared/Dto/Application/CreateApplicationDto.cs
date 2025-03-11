@@ -12,5 +12,7 @@ namespace profunion.Shared.Dto.Application
 
         public long userId { get; set; }
 
+        public int places { get; set; }
+
     }
 }

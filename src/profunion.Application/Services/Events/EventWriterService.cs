@@ -40,6 +40,9 @@ namespace profunion.Applications.Services.Events
             if (eventsCreate == null)
                 throw new ArgumentNullException();
 
+            if (eventsCreate.date < DateTime.Now)
+                throw new ArgumentNullException();
+
             var eventsMap = _mapper.Map<Event>(eventsCreate);
             
             if (eventsCreate.categoriesId?.Any() == true)
@@ -75,7 +78,7 @@ namespace profunion.Applications.Services.Events
 
             await _update.UpdateEntity<Event, UpdateEventDto, string>(eventId, updateEvent);
 
-            if (updateEvent.categoriesId != null && updateEvent.categoriesId.Any())
+            if (updateEvent.categoriesId != null)
             {
                 var eventCategories = _context.EventCategories.Where(ec => ec.eventId == eventId).ToList();
                 _context.EventCategories.RemoveRange(eventCategories);

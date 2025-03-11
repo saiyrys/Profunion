@@ -16,6 +16,6 @@ namespace profunion.Applications.Interface.IApplications
 
         Task<bool> CreateApplication(CreateApplicationDto createApplication);
 
-        Task<(IEnumerable<GetApplicationDto>, int TotalPages)> GetUserApplication(long userId, int page);
+        Task<(IEnumerable<GetUserApplicationDto>, int TotalPages)> GetUserApplication(long userId, int page);
     }
 }

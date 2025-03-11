@@ -3,8 +3,8 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "installers/profunion-v1.0.0-setup.exe",
-      "AssetFile": "installers/profunion-v1.0.0-setup.exe",
+      "Route": "installers/profunion-v1.2.1-setup.exe",
+      "AssetFile": "installers/profunion-v1.2.1-setup.exe",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "82475524"
+          "Value": "82576408"
         },
         {
           "Name": "Content-Type",
@@ -25,23 +25,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WeGR0GSexro6SOL9oYwZ+VXO5ttF4OaIPHWrsxjXSHs=\""
+          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Mar 2025 16:32:55 GMT"
+          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WeGR0GSexro6SOL9oYwZ+VXO5ttF4OaIPHWrsxjXSHs="
+          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
         }
       ]
     },
     {
-      "Route": "installers/profunion-v1.0.0-setup.hyg6ui2vlo.exe",
-      "AssetFile": "installers/profunion-v1.0.0-setup.exe",
+      "Route": "installers/profunion-v1.2.1-setup.kkl8quv699.exe",
+      "AssetFile": "installers/profunion-v1.2.1-setup.exe",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -54,7 +54,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "82475524"
+          "Value": "82576408"
         },
         {
           "Name": "Content-Type",
@@ -62,271 +62,25 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WeGR0GSexro6SOL9oYwZ+VXO5ttF4OaIPHWrsxjXSHs=\""
+          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Mar 2025 16:32:55 GMT"
+          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hyg6ui2vlo"
+          "Value": "kkl8quv699"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-WeGR0GSexro6SOL9oYwZ+VXO5ttF4OaIPHWrsxjXSHs="
+          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
         },
         {
           "Name": "label",
-          "Value": "installers/profunion-v1.0.0-setup.exe"
-        }
-      ]
-    },
-    {
-      "Route": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.oa3xwk0z69.png",
-      "AssetFile": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "93923"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 08:51:10 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "oa3xwk0z69"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU="
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png"
-        }
-      ]
-    },
-    {
-      "Route": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png",
-      "AssetFile": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "93923"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 08:51:10 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EMHiXtWtVH2tTgOdKWi+fAvVzNH8N3NZRo++WpNq1KU="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
-      "AssetFile": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "95132"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 08:52:34 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.uw0xqpbluw.png",
-      "AssetFile": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "95132"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 08:52:34 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uw0xqpbluw"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Ii9lV16sDM/8uBF6rdI6RCVocpZA2vHaYQ7ac25IkHk="
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png"
-        }
-      ]
-    },
-    {
-      "Route": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.al8y5grnpf.png",
-      "AssetFile": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1588633"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 09:23:50 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "al8y5grnpf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc="
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png"
-        }
-      ]
-    },
-    {
-      "Route": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
-      "AssetFile": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1588633"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 09:23:50 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/jS2mZDPtVIGaBHygcQSTAVYLJAJ6fERrO+kRaCOkfc="
+          "Value": "installers/profunion-v1.2.1-setup.exe"
         }
       ]
     }

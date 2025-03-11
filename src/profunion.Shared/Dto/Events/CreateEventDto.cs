@@ -14,9 +14,11 @@
         public string? link { get; set; }
 
         public ICollection<string>? categoriesId { get; set; }
-        public bool? isActive { get; set; }
-        public string? status { get; set; }
-        public int? Places { get; set; }
 
+        public bool? isActive { get; set; }
+
+        public string? status { get; set; }
+
+        public int? places { get; set; }
     }
 }

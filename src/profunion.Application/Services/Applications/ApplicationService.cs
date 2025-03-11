@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using profunion.Applications.Interface.IApplications;
+using profunion.Applications.Interface.IEvents.IService;
 using profunion.Domain.Models.ApplicationModels;
 using profunion.Domain.Models.NewsModels;
 using profunion.Domain.Persistance;
@@ -12,13 +13,15 @@ namespace profunion.Applications.Services.Applications
     public class ApplicationService : IApplicationService
     {
         private readonly IApplicationRepository _applicationRepository;
+        private readonly IEventReaderService _eventService;
         private readonly IMapper _mapper;
         private readonly IPagination _pagination;
         private readonly ISortApplication _sortApplication;
 
-        public ApplicationService(IApplicationRepository applicationRepository, IMapper mapper,IPagination pagination, ISortApplication sortApplication)
+        public ApplicationService(IApplicationRepository applicationRepository, IEventReaderService eventService, IMapper mapper,IPagination pagination, ISortApplication sortApplication)
         {
             _applicationRepository = applicationRepository;
+            _eventService = eventService;
             _mapper = mapper;
             _pagination = pagination;
             _sortApplication = sortApplication;
@@ -32,7 +35,7 @@ namespace profunion.Applications.Services.Applications
 
             var application = _mapper.Map<Application>(createApplication);
 
-            if (!await _applicationRepository.CreateEntityAsync(application))
+            if (!await _applicationRepository.CreateEntityAsync(application, createApplication.places))
             {
                 throw new InvalidOperationException();
             }
@@ -81,20 +84,23 @@ namespace profunion.Applications.Services.Applications
             return applicationsDto;
         }
 
-        public async Task<(IEnumerable<GetApplicationDto>, int TotalPages)> GetUserApplication(long userId, int page)
+        public async Task<(IEnumerable<GetUserApplicationDto>, int TotalPages)> GetUserApplication(long userId, int page)
         {
             var applications = await _applicationRepository.GetAllAsync();
 
             var userApplications = applications.Where(u => u.UserId == userId);
 
-            var applicationsDto = _mapper.Map<IEnumerable<GetApplicationDto>>(userApplications);
+            var events = await _eventService.GetFullEventData(); // Загружаем мероприятия
+
+            var applicationsDto = userApplications.Select(app => new GetUserApplicationDto
+            {
+                @event = events.FirstOrDefault(e => e.eventId == app.EventId), // Присоединяем мероприятие
+                takePlaces = app.Places // Берем количество мест
+            });
 
             var paginateItem = await _pagination.Paginate(applicationsDto, page);
-            applicationsDto = paginateItem.Items;
 
-            int totalPages = paginateItem.TotalPages;
-
-            return (applicationsDto, totalPages);
+            return (paginateItem.Items, paginateItem.TotalPages);
         }
     }
 }

@@ -9,9 +9,8 @@
         public List<string>? imagesId { get; set; }
         public string? link { get; set; }
         public List<string>? categoriesId { get; set; }
-        public int? totalPlaces { get; set; }
+        public int? places { get; set; }
         public bool? isActive { get; set; }
         public string? status { get; set; }
-
     }
 }

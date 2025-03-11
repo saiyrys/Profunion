@@ -14,7 +14,7 @@ namespace profunion.Domain.Persistance
 
         Task<ICollection<Application>> GetAllAsync();
 
-        Task<bool> CreateEntityAsync(Application model);
+        Task<bool> CreateEntityAsync(Application model, int places);
 
         Task<bool> UpdateEntityAsync(Application model);
 

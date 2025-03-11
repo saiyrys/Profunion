@@ -11,16 +11,8 @@ namespace profunion.Shared.Dto.Application
 {
     public class GetUserApplicationDto
     {
-        public string id { get; set; }
+        public GetEventDto @event { get; set; }
 
-        public long userId { get; set; }
-
-        public string eventId { get; set; }
-
-
-        public GetUserInfo user { get; set; }
-        public GetEventInfo @event { get; set; }
-
-        public int places { get; set; }
+        public int takePlaces { get; set; }
     }
 }

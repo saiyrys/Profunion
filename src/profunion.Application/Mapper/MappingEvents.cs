@@ -18,7 +18,8 @@ namespace profunion.Applications.Mapper
             CreateMap<Event, CreateEventDto>();
 
 
-            CreateMap<UpdateEventDto, Event>();
+            CreateMap<UpdateEventDto, Event>()
+                .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
             CreateMap<Event, UpdateEventDto>();
 
             CreateMap<DeleteEventDto, Event>();

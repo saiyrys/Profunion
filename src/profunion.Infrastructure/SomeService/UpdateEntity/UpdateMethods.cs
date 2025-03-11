@@ -38,6 +38,19 @@ namespace profunion.Infrastructure.SomeService.UpdateEntity
                     var entityProperty = modelType.GetProperty(property.Name);
                     if (entityProperty != null && entityProperty.CanWrite)
                     {
+                        /*if (newValue is int intValue && intValue == 0) // Проверяем `int`, включая `0`
+                        {
+                            entityProperty.SetValue(updateModel, intValue);
+                        }
+                        else if (newValue is bool boolValue) // Обновляем `bool`
+                        {
+                            entityProperty.SetValue(updateModel, boolValue);
+                        }
+                        else if (newValue != null) // Остальные типы
+                        {
+                            entityProperty.SetValue(updateModel, newValue);
+                        }
+*/
                         entityProperty.SetValue(updateModel, newValue);
                     }
                 }

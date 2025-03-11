@@ -41,7 +41,7 @@ namespace profunion.API.Controllers
         }
 
         [HttpPost("register")]
-       /* [Authorize(Roles = "ADMIN, MODER")]*/
+        [Authorize(Roles = "ADMIN, MODER")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]

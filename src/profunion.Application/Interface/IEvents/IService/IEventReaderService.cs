@@ -14,5 +14,7 @@ namespace profunion.Applications.Interface.IEvents.IService
         Task<GetEventDto> GetEventsByID(string eventId);
         /*        Task<bool> confirmLink(string eventId);*/
 
+        Task<IEnumerable<GetEventDto>> GetFullEventData();
+
     }
 }

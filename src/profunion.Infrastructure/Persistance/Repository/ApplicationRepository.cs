@@ -23,7 +23,7 @@ namespace profunion.Infrastructure.Persistance.Repository
         .AsNoTracking()
         .ToListAsync();
 
-        public async Task<bool> CreateEntityAsync(Application model)
+        public async Task<bool> CreateEntityAsync(Application model, int places)
         {
             var existingApplication = await _context.Application
                 .FirstOrDefaultAsync(a => a.UserId == model.UserId && a.EventId == model.EventId);
@@ -35,13 +35,14 @@ namespace profunion.Infrastructure.Persistance.Repository
 
             if (existingApplication != null)
             {
-                existingApplication.Places += 1; // Обновляем запись, а не создаем новую
+                existingApplication.Places += places; // Обновляем запись, а не создаем новую
 
-                if(@event.Places == 0)
+                if(@event.places < places)
                 {
                     throw new InvalidOperationException("У мероприятия закончились места");
                 }
-                @event.Places -= 1; // Уменьшаем места в мероприятии
+
+                @event.places -= places; // Уменьшаем места в мероприятии
 
                 _context.Update(user);
                 _context.Update(@event);
@@ -51,8 +52,8 @@ namespace profunion.Infrastructure.Persistance.Repository
 
             // Если заявки ещё нет, создаём её
             await _dbSet.AddAsync(model);
-            model.Places += 1;
-            @event.Places -= 1;
+            model.Places = places;
+            @event.places -= places;
 
             _context.Update(@event);
 

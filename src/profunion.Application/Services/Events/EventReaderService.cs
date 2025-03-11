@@ -43,7 +43,6 @@ namespace profunion.Applications.Services.Events
                 events = await Search<GetEventDto>.SearchEntities(events, query.search);
             }
 
-
             if (sort != SortState.Current)
             {
                 events = _sortAction.SortObject(events, sort);
@@ -51,12 +50,14 @@ namespace profunion.Applications.Services.Events
 
             if(query.date_start != null || query.date_end != null || query.time_start != null || query.time_end != null)
             {
+                /*var moscowTime = TimeZoneInfo.ConvertTimeFromUtc(date, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time"));*/
+
                 events = events.Where(e =>
-                    (!string.IsNullOrEmpty(query.date_start) ? e.date.Date >= DateTime.Parse(query.date_start).Date : true) &&
-                    (!string.IsNullOrEmpty(query.date_end) ? e.date.Date <= DateTime.Parse(query.date_end).Date : true) &&
-                    (!string.IsNullOrEmpty(query.time_start) ? e.date.TimeOfDay >= DateTime.Parse(query.time_start).TimeOfDay : true) &&
-                    (!string.IsNullOrEmpty(query.time_end) ? e.date.TimeOfDay <= DateTime.Parse(query.time_end).TimeOfDay : true)
-                ).ToList();
+                     (!string.IsNullOrEmpty(query.date_start) ? e.date.ToUniversalTime().Date >= DateTime.Parse(query.date_start).Date : true) &&
+                     (!string.IsNullOrEmpty(query.date_end) ? e.date.ToUniversalTime().Date <= DateTime.Parse(query.date_end).Date : true) &&
+                     (!string.IsNullOrEmpty(query.time_start) ? e.date.TimeOfDay >= TimeSpan.ParseExact(query.time_start, @"hh\:mm", null) : true) &&
+                     (!string.IsNullOrEmpty(query.time_end) ? e.date.TimeOfDay <= TimeSpan.ParseExact(query.time_end, @"hh\:mm", null) : true)
+                    ).ToList();
             }
 
             if (!string.IsNullOrEmpty(query.status))
@@ -83,7 +84,7 @@ namespace profunion.Applications.Services.Events
             return @eventMap;
         }
 
-        private async Task<IEnumerable<GetEventDto>> GetFullEventData()
+        public async Task<IEnumerable<GetEventDto>> GetFullEventData()
         {
             var baseUrl = _configuration["EventUrl"];
             var events = await _context.Events
@@ -99,7 +100,7 @@ namespace profunion.Applications.Services.Events
                      organizer = e.organizer,
                      date = e.date,
                      link = e.link,
-                     places = e.Places,
+                     places = e.places,
                      isActive = e.isActive,
                      status = e.status,
                      createdAt = e.createdAt.ToString("yyyy-MM-dd"),

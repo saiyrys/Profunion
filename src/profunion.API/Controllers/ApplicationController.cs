@@ -48,7 +48,7 @@ namespace profunion.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok(new { Items = userApplication, TotalPages = totalPages });
+            return Ok(new { Items = userApplication, countPages = totalPages });
         }
 
         [HttpGet("report")]

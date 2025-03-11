@@ -165,6 +165,7 @@ namespace profunion.API.Controllers
         }
                
         [HttpDelete("image/{fileName}")]
+        [Authorize(Roles = "ADMIN, MODER")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteImage(string fileName)

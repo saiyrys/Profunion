@@ -12,7 +12,7 @@ namespace profunion.Domain.Models.EventModels
             eventId = Guid.NewGuid().ToString();
             createdAt = DateTime.Now;
             updatedAt = DateTime.Now;
-            totalPlaces = Places;
+            totalPlaces = places;
         }
         public string eventId { get; set; }
         [MaxLength(25)]
@@ -22,7 +22,7 @@ namespace profunion.Domain.Models.EventModels
         public DateTime date { get; set; }
         public string link { get; set; }
         public int totalPlaces { get; set; }
-        public int Places { get; set; }
+        public int places { get; set; }
         public bool isActive { get; set; }
         public string status { get; set; }
         public DateTime createdAt { get; set; }

@@ -27,7 +27,7 @@ namespace profunion.Infrastructure.Persistance.Repository
 
         public async Task<bool> CreateEntityAsync(Event model)
         {
-            model.totalPlaces = model.Places;
+            model.totalPlaces = model.places;
 
             await _dbSet.AddAsync(model);
 

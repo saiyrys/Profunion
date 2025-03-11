@@ -35,7 +35,7 @@ namespace profunion.Applications.Services.Events
                     worksheet.Cells[row, 2].Value = ev.date.ToString("dd.MM.yyyy HH:mm");
                     worksheet.Cells[row, 3].Value = ev.totalPlaces;
                     worksheet.Cells[row, 4].Formula = $"=C{row}-D{row}";
-                    worksheet.Cells[row, 5].Value = ev.Places;
+                    worksheet.Cells[row, 5].Value = ev.places;
                     row++;
                 }
 

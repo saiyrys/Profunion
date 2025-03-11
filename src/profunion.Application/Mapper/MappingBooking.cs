@@ -2,8 +2,11 @@
 using profunion.Domain.Models.ApplicationModels;
 using profunion.Domain.Models.UserModels;
 using profunion.Shared.Dto.Application;
+using profunion.Shared.Dto.Category;
 using profunion.Shared.Dto.Events;
+using profunion.Shared.Dto.Uploads;
 using profunion.Shared.Dto.Users;
+using System.Buffers.Text;
 
 namespace profunion.Applications.Mapper
 {
@@ -30,7 +33,8 @@ namespace profunion.Applications.Mapper
                      title = src.Event.title
                  }));
 
-            CreateMap<Application, GetUserApplicationDto>();
+            CreateMap<Application, GetUserApplicationDto>()
+                 .ForMember(dest => dest.takePlaces, opt => opt.MapFrom(src => src.Places));
         }
 
     }
