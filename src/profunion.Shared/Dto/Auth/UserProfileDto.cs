@@ -8,7 +8,7 @@ namespace profunion.Shared.Dto.Auth
 {
     public class UserProfileDto
     {
-/*        public string userId { get; set; }*/
+        public string userId { get; set; }
         public string username { get; set; }
         public string firstname { get; set; }
         public string middlename { get; set; }

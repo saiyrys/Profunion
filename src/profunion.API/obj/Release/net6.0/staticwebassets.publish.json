@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "oUac4f1mDhpEN5TTFmqkYYiRXg8a7SIYHpZBUP+WztA=",
+  "Source": "profunion.API",
+  "BasePath": "_content/profunion.API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "profunion.API\\wwwroot",
+      "Source": "profunion.API",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "installers/profunion-v1.2.1-setup#[.{fingerprint}]?.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kkl8quv699",
+      "Integrity": "zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\installers\\profunion-v1.2.1-setup.exe"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "installers/profunion-v1.2.1-setup.exe",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82576408"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
+        }
+      ]
+    },
+    {
+      "Route": "installers/profunion-v1.2.1-setup.kkl8quv699.exe",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82576408"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kkl8quv699"
+        },
+        {
+          "Name": "label",
+          "Value": "installers/profunion-v1.2.1-setup.exe"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
+        }
+      ]
+    }
+  ]
+}

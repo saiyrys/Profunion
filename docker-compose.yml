@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: my_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: t55061700
+      MYSQL_DATABASE: Profunion
+      MYSQL_USER: saiyrys
+      MYSQL_PASSWORD: t55061700
+    ports:
+      - "3303:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql  
+      - ./db/profunion_dump.sql:/docker-entrypoint-initdb.d/profunion_dump.sql 
+    networks:
+      - backend_network
+volumes:
+  mysql_data:
+
+networks:
+  backend_network:

@@ -10,6 +10,6 @@ namespace profunion.Shared.Dto.Auth
     public class LoginResponseDto
     {
         public string AccessToken { get; set; }
-        public UserProfileDto User { get; set; }
+        public UserInfoDto User { get; set; }
     }
 }

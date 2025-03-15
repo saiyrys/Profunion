@@ -1,0 +1,15 @@
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\bin\Release\net6.0\profunion.Shared.deps.json
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\bin\Release\net6.0\profunion.Shared.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\bin\Release\net6.0\profunion.Shared.pdb
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\bin\Release\net6.0\profunion.Domain.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\bin\Release\net6.0\profunion.Domain.pdb
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.csproj.AssemblyReference.cache
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.AssemblyInfoInputs.cache
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.AssemblyInfo.cs
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunio.8F5FA469.Up2Date
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\refint\profunion.Shared.dll
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\profunion.Shared.pdb
+C:\Users\Павел\Desktop\Profunions\src\profunion.Shared\obj\Release\net6.0\ref\profunion.Shared.dll

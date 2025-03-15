@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "installers/profunion-v1.2.1-setup.exe",
+      "AssetFile": "installers/profunion-v1.2.1-setup.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82576408"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
+        }
+      ]
+    },
+    {
+      "Route": "installers/profunion-v1.2.1-setup.kkl8quv699.exe",
+      "AssetFile": "installers/profunion-v1.2.1-setup.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82576408"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kkl8quv699"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
+        },
+        {
+          "Name": "label",
+          "Value": "installers/profunion-v1.2.1-setup.exe"
+        }
+      ]
+    }
+  ]
+}

@@ -52,19 +52,16 @@ namespace profunion.Applications.Services.Auth
             
             if (user == null || !await ValidatePassword(loginUser.password, user.password, user.salt))
                 throw new BadRequestException("Неправильный логин или пароль");
-            
-            var userDto = _mapper.Map<UserInfoDto>(user);
 
-            var userProfileDto = _mapper.Map<UserProfileDto>(user);
+            var userDto = _mapper.Map<UserInfoDto>(user);
 
             var token = await _generateToken.GenerateToken(userDto);
 
             return new LoginResponseDto
             {
                 AccessToken = token.Item1,
-                User = userProfileDto
+                User = userDto
             };
-
         }
 
         public async Task<LoginResponseDto> LoginEmail(string email, string code)
@@ -83,14 +80,12 @@ namespace profunion.Applications.Services.Auth
 
             var userDto = _mapper.Map<UserInfoDto>(user);
 
-            var userProfileDto = _mapper.Map<UserProfileDto>(user);
-
             var token = await _generateToken.GenerateToken(userDto);
 
             return new LoginResponseDto
             {
                 AccessToken = token.Item1,
-                User = userProfileDto
+                User = userDto
             };
         }
 
