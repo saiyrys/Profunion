@@ -120,7 +120,6 @@ builder.Services.AddScoped<IUpdateMethods, UpdateMethods>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var tokenSettings = builder.Configuration.GetSection("JwtOptions");
 var secretKey = Encoding.UTF8.GetBytes(Auth_Constants.JWT_SECRET_KEY);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
