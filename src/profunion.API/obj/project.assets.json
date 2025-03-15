@@ -1917,6 +1917,7 @@
           "RestSharp": "112.1.0",
           "SendGrid": "9.29.3",
           "System.IdentityModel.Tokens.Jwt": "8.6.0",
+          "profunion.Domain": "1.0.0",
           "profunion.Infrastructure": "1.0.0",
           "profunion.Shared": "1.0.0"
         },

@@ -2677,7 +2677,7 @@
             "nullable": true
           },
           "user": {
-            "$ref": "#/components/schemas/UserProfileDto"
+            "$ref": "#/components/schemas/UserInfoDto"
           }
         },
         "additionalProperties": false
@@ -2930,26 +2930,34 @@
         },
         "additionalProperties": false
       },
-      "UserProfileDto": {
+      "UserInfoDto": {
         "type": "object",
         "properties": {
-          "username": {
+          "userId": {
             "type": "string",
             "nullable": true
           },
-          "firstname": {
+          "userName": {
             "type": "string",
             "nullable": true
           },
-          "middlename": {
+          "firstName": {
             "type": "string",
             "nullable": true
           },
-          "lastname": {
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
             "type": "string",
             "nullable": true
           },
           "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
             "type": "string",
             "nullable": true
           }

@@ -137,7 +137,7 @@ namespace profunion.Applications.Services.Auth
 
             var userDto = _mapper.Map<UserInfoDto>(user);
 
-            var userProfileDto = _mapper.Map<UserProfileDto>(user);
+            var userProfileDto = _mapper.Map<UserInfoDto>(user);
 
 
             var newToken = await _generateToken.GenerateToken(userDto);

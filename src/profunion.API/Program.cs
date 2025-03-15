@@ -166,10 +166,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
-builder.WebHost.ConfigureKestrel(options =>
+/*builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(5000); // Отключаем HTTPS, только HTTP
-});
+});*/
 
 var app = builder.Build();
 app.UseCors("AllowSpecificOrigins");
