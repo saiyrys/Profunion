@@ -11,7 +11,6 @@ namespace profunion.Shared.Dto.Users
 {
     public class GetUserDto : ISearchable
     {
-        public string userId { get; set; }
         public string userName { get; set; }
         public string firstName { get; set; }
         public string middleName { get; set; }

@@ -10,6 +10,7 @@ namespace profunion.Applications.Interface.IAuth
     {
         Task<TUser> FindByIdAsync(string userId);
         Task<TUser> FindByNameAsync(string userName);
+        Task<TUser> FindByEmailAsync(string mail);
         Task<TUser> FindByTokenAsync(string token);
         Task<string> VerifyByTokenAsync();
     }

@@ -136,6 +136,7 @@ namespace profunion.API.Controllers
         public async Task<IActionResult> UpdateUser(string userId, [FromBody] UpdateUserDto updateUser)
         {
             long Id = long.Parse(userId); 
+
             if (updateUser == null)
             {
                 return BadRequest("Пользователь не найден");
@@ -147,6 +148,7 @@ namespace profunion.API.Controllers
             {
                 return NoContent();
             }
+
             else
             {
                 return StatusCode(500);

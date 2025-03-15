@@ -38,6 +38,8 @@ using profunion.Applications.Services.Newses.Sort;
 using profunion.Applications.Services.Applications.Sort;
 using profunion.API;
 using profunion.API.Background;
+using profunion.Applications.Interface.IEmailService;
+using profunion.Applications.Services.EmailService;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -61,6 +63,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<UserFactory, CreateUserFactory>();
 builder.Services.AddScoped<TokenGeneration>();
 builder.Services.AddScoped<IHashingPassword, HashingPassword>();
+builder.Services.AddScoped<IPasswordService, AuthService>();
 builder.Services.AddHttpContextAccessor();
 // Зависимости пользователя
 builder.Services.AddScoped<IUserService, UserService>();
@@ -84,6 +87,11 @@ builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddSingleton<AddFileQueue>();
 builder.Services.AddHostedService<AddFileService>();
+
+
+// Зависимости для почты
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddSingleton<AuthCodeCache>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -163,6 +171,7 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 app.UseCors("AllowSpecificOrigins");
 app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseHttpsRedirection();
 
 
 // Configure the HTTP request pipeline.

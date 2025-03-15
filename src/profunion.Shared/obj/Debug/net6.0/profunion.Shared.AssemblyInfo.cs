@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("profunion.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+324937bca98ca2ab0d674a61c46e61ae60a0d3ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a7915884feb6704168778c3acf756f82c588af1")]
 [assembly: System.Reflection.AssemblyProductAttribute("profunion.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("profunion.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

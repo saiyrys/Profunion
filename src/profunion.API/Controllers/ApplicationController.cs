@@ -36,7 +36,7 @@ namespace profunion.API.Controllers
         }
 
         [HttpGet("{userId}")]
-        [Authorize(Roles = "ADMIN, MODER")]
+        [Authorize]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]

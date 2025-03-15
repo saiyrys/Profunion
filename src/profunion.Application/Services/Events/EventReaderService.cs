@@ -53,11 +53,11 @@ namespace profunion.Applications.Services.Events
                 /*var moscowTime = TimeZoneInfo.ConvertTimeFromUtc(date, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time"));*/
 
                 events = events.Where(e =>
-                     (!string.IsNullOrEmpty(query.date_start) ? e.date.ToUniversalTime().Date >= DateTime.Parse(query.date_start).Date : true) &&
-                     (!string.IsNullOrEmpty(query.date_end) ? e.date.ToUniversalTime().Date <= DateTime.Parse(query.date_end).Date : true) &&
-                     (!string.IsNullOrEmpty(query.time_start) ? e.date.TimeOfDay >= TimeSpan.ParseExact(query.time_start, @"hh\:mm", null) : true) &&
-                     (!string.IsNullOrEmpty(query.time_end) ? e.date.TimeOfDay <= TimeSpan.ParseExact(query.time_end, @"hh\:mm", null) : true)
-                    ).ToList();
+                 (!string.IsNullOrEmpty(query.date_start) ? e.date >= DateTime.Parse(query.date_start).ToUniversalTime() : true) &&
+                 (!string.IsNullOrEmpty(query.date_end) ? e.date <= DateTime.Parse(query.date_end).AddDays(1).AddTicks(-1).ToUniversalTime() : true) &&
+                 (!string.IsNullOrEmpty(query.time_start) ? e.date.TimeOfDay >= TimeSpan.ParseExact(query.time_start, @"hh\:mm", null) : true) &&
+                 (!string.IsNullOrEmpty(query.time_end) ? e.date.TimeOfDay <= TimeSpan.ParseExact(query.time_end, @"hh\:mm", null) : true)
+             ).ToList();
             }
 
             if (!string.IsNullOrEmpty(query.status))
@@ -98,7 +98,7 @@ namespace profunion.Applications.Services.Events
                      title = e.title,
                      description = e.description,
                      organizer = e.organizer,
-                     date = e.date,
+                     date = DateTime.SpecifyKind(e.date, DateTimeKind.Utc),
                      link = e.link,
                      places = e.places,
                      isActive = e.isActive,

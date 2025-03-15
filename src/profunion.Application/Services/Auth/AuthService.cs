@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using profunion.Applications.Interface.IAuth;
+using profunion.Applications.Interface.IEmailService;
+using profunion.Applications.Services.EmailService;
 using profunion.Domain.Factories.Users;
 using profunion.Domain.Models.UserModels;
 using profunion.Domain.Persistance;
@@ -11,7 +13,7 @@ using SendGrid.Helpers.Errors.Model;
 
 namespace profunion.Applications.Services.Auth
 {
-    public class AuthService : IAuthService
+    public class AuthService : IAuthService, IPasswordService
     {
         private readonly IControl<User> _control;
 
@@ -23,10 +25,13 @@ namespace profunion.Applications.Services.Auth
         private readonly UserFactory _userFactory;
 
         private readonly IUserRepository _userRepository;
- 
+
+        private readonly IEmailSender _emailSender;
+
         public AuthService(IControl<User> control,
             TokenGeneration generateToken, IHashingPassword hashingPassword,
-            IMapper mapper, UserFactory userFactory, IUserRepository userRepository)
+            IMapper mapper, UserFactory userFactory, IUserRepository userRepository,
+             IEmailSender emailSender)
         {
             _control = control;
             _generateToken = generateToken;
@@ -36,6 +41,8 @@ namespace profunion.Applications.Services.Auth
             _userFactory = userFactory;
 
             _userRepository = userRepository;
+
+            _emailSender = emailSender;
 
         }
 
@@ -48,14 +55,43 @@ namespace profunion.Applications.Services.Auth
             
             var userDto = _mapper.Map<UserInfoDto>(user);
 
+            var userProfileDto = _mapper.Map<UserProfileDto>(user);
+
             var token = await _generateToken.GenerateToken(userDto);
 
             return new LoginResponseDto
             {
                 AccessToken = token.Item1,
-                User = userDto
+                User = userProfileDto
             };
 
+        }
+
+        public async Task<LoginResponseDto> LoginEmail(string email, string code)
+        {
+            var user = await _control.FindByEmailAsync(email);
+
+            if (user == null)
+                throw new ArgumentException("Email не найден в системе");
+
+            /*await _emailSender.SendAuthorizationCode(email);*/
+
+            string cacheCode = await AuthCodeCache.GetCode(email);
+
+            if (code != cacheCode)
+                throw new UnauthorizedAccessException("Неверный код авторизации");
+
+            var userDto = _mapper.Map<UserInfoDto>(user);
+
+            var userProfileDto = _mapper.Map<UserProfileDto>(user);
+
+            var token = await _generateToken.GenerateToken(userDto);
+
+            return new LoginResponseDto
+            {
+                AccessToken = token.Item1,
+                User = userProfileDto
+            };
         }
 
         public async Task<bool> Registration(RegistrationDto registration)
@@ -106,16 +142,41 @@ namespace profunion.Applications.Services.Auth
 
             var userDto = _mapper.Map<UserInfoDto>(user);
 
+            var userProfileDto = _mapper.Map<UserProfileDto>(user);
+
+
             var newToken = await _generateToken.GenerateToken(userDto);
 
             return new LoginResponseDto
             {
                 AccessToken = newToken.Item1,
-                User = userDto
+                User = userProfileDto
             };
         }
 
         private async Task<bool> ValidatePassword(string loginPassword, string dbPassword, string salt)
             => await _hashingPassword.VerifyPassword(loginPassword, dbPassword, salt);
+
+        public async Task<bool> ChangePassword(string token, long userId, string password)
+        {
+            var currentUser = await _control.FindByTokenAsync(token);
+
+            if (currentUser.role == "ADMIN" || currentUser.userId == userId)
+            {
+                var user = await _userRepository.GetByIdAsync(userId);
+
+                var (newPass, salt) = await _hashingPassword.HashPassword(password);
+                user.password = newPass;
+                user.salt = Convert.ToBase64String(salt);
+
+                await _userRepository.UpdateAsync(user);
+
+                return true;
+            }
+
+            throw new UnauthorizedAccessException();
+        }
+
+        
     }
 }

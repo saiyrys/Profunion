@@ -23,6 +23,9 @@ namespace profunion.Applications.Mapper
             CreateMap<UserInfoDto, User>();
             CreateMap<User, UserInfoDto>();
 
+            CreateMap<UserProfileDto, User>();
+            CreateMap<User, UserProfileDto>();
+
             CreateMap<GetUserDto, User>();
             CreateMap<User, GetUserDto>();
 

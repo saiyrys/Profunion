@@ -32,6 +32,10 @@ namespace profunion.Applications.Services.Auth
             return await _context.Set<TUser>().FirstOrDefaultAsync(u => EF.Property<string>(u, "userName") == userName, CancellationToken);
         }
 
+        public virtual async Task<TUser> FindByEmailAsync(string mail)
+        {
+            return await _context.Set<TUser>().FirstOrDefaultAsync(u => EF.Property<string>(u, "email") == mail, CancellationToken);
+        }
         public virtual async Task<TUser> FindByTokenAsync(string token)
         {
             string key = Auth_Constants.JWT_SECRET_KEY;
