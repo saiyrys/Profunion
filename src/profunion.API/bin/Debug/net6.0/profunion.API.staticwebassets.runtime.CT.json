@@ -6,60 +6,12 @@
     "Children": {
       "installers": {
         "Children": {
-          "profunion-v1.0.0-setup.exe": {
+          "profunion-v1.2.1-setup.exe": {
             "Children": null,
             "Asset": {
               "ContentRootIndex": 0,
-              "SubPath": "installers/profunion-v1.0.0-setup.exe"
+              "SubPath": "installers/profunion-v1.2.1-setup.exe"
             },
-            "Patterns": null
-          }
-        },
-        "Asset": null,
-        "Patterns": null
-      },
-      "uploads": {
-        "Children": {
-          "uploads": {
-            "Children": {
-              "EventUploads": {
-                "Children": {
-                  "416ad02d-4db7-471f-9c63-2915a220e8d0.png": {
-                    "Children": null,
-                    "Asset": {
-                      "ContentRootIndex": 0,
-                      "SubPath": "uploads/uploads/EventUploads/416ad02d-4db7-471f-9c63-2915a220e8d0.png"
-                    },
-                    "Patterns": null
-                  },
-                  "82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png": {
-                    "Children": null,
-                    "Asset": {
-                      "ContentRootIndex": 0,
-                      "SubPath": "uploads/uploads/EventUploads/82977c7a-46a7-4ca2-9dbb-cee496e3e7b3.png"
-                    },
-                    "Patterns": null
-                  }
-                },
-                "Asset": null,
-                "Patterns": null
-              },
-              "NewsUploads": {
-                "Children": {
-                  "b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png": {
-                    "Children": null,
-                    "Asset": {
-                      "ContentRootIndex": 0,
-                      "SubPath": "uploads/uploads/NewsUploads/b3c3c10a-35b1-4562-ac5e-4b8c1e525581.png"
-                    },
-                    "Patterns": null
-                  }
-                },
-                "Asset": null,
-                "Patterns": null
-              }
-            },
-            "Asset": null,
             "Patterns": null
           }
         },

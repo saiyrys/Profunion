@@ -77,9 +77,9 @@ namespace profunion.Applications.Services.Users
             return (userDto, totalPages);
         }
 
-        public async Task<GetUserDto> GetUserById(long userId)
+        public async Task<GetUserDto> GetUserById(long userName)
         {
-            var user = await _userRepository.GetByIdAsync(userId);
+            var user = await _userRepository.GetByIdAsync(userName);
 
             if (user == null)
                 throw new KeyNotFoundException();

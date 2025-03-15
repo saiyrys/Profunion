@@ -50,7 +50,7 @@ namespace profunion.API.Controllers
         [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> GetCodeForEmail(string email)
+        public async Task<IActionResult> GetCodeForEmail([FromBody]string email)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +73,7 @@ namespace profunion.API.Controllers
         [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> LoginUserForEmail(string email, string code)
+        public async Task<IActionResult> LoginUserForEmail([FromBody]string email, string code)
         {
             if (!ModelState.IsValid)
             {
