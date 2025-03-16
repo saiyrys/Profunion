@@ -55,30 +55,52 @@ namespace profunion.Infrastructure.Persistance.Repository
         {
             try
             {
+                // 1. Получаем все события, связанные с категорией
                 var rangeToDelete = await _context.Events.Include(e => e.EventCategories)
-                    .Where(e => e.EventCategories.Any(ec => ec.CategoriesId == categoryId)).ToListAsync(); 
-                
-                var EventCategoriesToDelete = await _context.EventCategories.Where(ec => ec.CategoriesId == categoryId).ToListAsync(); 
+                    .Where(e => e.EventCategories.Any(ec => ec.CategoriesId == categoryId))
+                    .ToListAsync();
+
+                // 2. Удаляем все связи между событиями и категорией в промежуточной таблице
+                var EventCategoriesToDelete = await _context.EventCategories
+                    .Where(ec => ec.CategoriesId == categoryId)
+                    .ToListAsync();
+
                 _context.EventCategories.RemoveRange(EventCategoriesToDelete);
 
+                // 3. Сохраняем изменения в EventCategories
                 await SaveAsync();
-    
-                foreach(var delete in rangeToDelete)
+
+                // 4. Для каждого события проверяем, если оно больше не связано с другими категориями
+                foreach (var delete in rangeToDelete)
                 {
+                    // Проверяем, если у события осталась только одна категория (которую мы удаляем)
                     if (!await _context.EventCategories.AnyAsync(ec => ec.eventId == delete.eventId))
                     {
+                        // 5. Удаляем файлы, если событие больше не связано с категориями
                         await _fileRepository.DeleteEventFile(delete.eventId);
+
+                        // 6. Удаляем заявки для этого события из таблицы Application
+                        var applicationEntries = await _context.Application
+                            .Where(a => a.EventId == delete.eventId)
+                            .ToListAsync();
+
+                        _context.Application.RemoveRange(applicationEntries);
+
+                        // 7. Удаляем само событие из базы данных
                         _context.Events.Remove(delete);
                     }
                 }
 
+                // 8. Сохраняем изменения после удаления событий, файлов и заявок
+                await SaveAsync();
+
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return false;
-            }    
+            }
         }
 
         public async Task<bool> SaveAsync()

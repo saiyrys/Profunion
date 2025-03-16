@@ -93,6 +93,8 @@ namespace profunion.Applications.Services.Category
 
             var categoryToDelete = await _categoryRepository.GetByIdAsync(id);
 
+
+            // Удаляем саму категорию
             await _categoryRepository.DeleteEntity(categoryToDelete);
 
             return true;
