@@ -55,21 +55,21 @@ namespace profunion.Applications.Services.Auth
 
         public async Task<string> VerifyByTokenAsync()
         {
-            if (HttpContext.HttpContext.Request.Headers == null)
-            {
-                /*var cookieToken = HttpContext.HttpContext.Request.Headers["accessToken"];
+            var request = HttpContext.HttpContext.Request;
 
-                await FindByTokenAsync(cookieToken);*/
+            // Проверяем сначала куки
+            var token = request.Cookies["accessToken"];
+
+            // Если в куках нет, пробуем заголовок
+            if (string.IsNullOrEmpty(token) && request.Headers.TryGetValue("Authorization", out var authHeader))
+            {
+                if (authHeader.ToString().StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+                {
+                    token = authHeader.ToString().Substring("Bearer ".Length).Trim();
+                }
             }
 
-            string token = HttpContext.HttpContext.Request.Headers["authorization"];
-
-            if (token.StartsWith("Bearer"))
-                token = token.Substring("Bearer ".Length).Trim();
-
             return token;
-            
-            
         }
     }
 }

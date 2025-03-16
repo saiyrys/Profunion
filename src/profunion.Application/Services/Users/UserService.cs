@@ -93,25 +93,27 @@ namespace profunion.Applications.Services.Users
         {
             var currentUser = await _userRepository.GetByIdAsync(userId);
 
+            if (currentUser == null)
+                throw new UnauthorizedAccessException("Пользователь не найден");
+
+            // Проверяем, может ли текущий пользователь обновлять данные
+            if (currentUser.role != "ADMIN" && currentUser.userId != userId)
+                throw new UnauthorizedAccessException("Недостаточно прав для изменения данных");
+
             if (string.IsNullOrWhiteSpace(updateUser.password))
             {
                 updateUser.password = null; // Это решит проблему
             }
-
 
             await _update.UpdateEntity<User, UpdateUserDto, long>(userId, updateUser);
 
             if (!string.IsNullOrEmpty(updateUser.password) && !string.IsNullOrWhiteSpace(updateUser.password))
             {
                 HashingPassword hashing = new();
-
                 var (hashedPassword, salt) = await hashing.HashPassword(updateUser.password);
+
                 currentUser.password = hashedPassword;
-
-                var userMap = _mapper.Map<User>(currentUser);
-
-                userMap.password = hashedPassword;
-                userMap.salt = Convert.ToBase64String(salt);
+                currentUser.salt = Convert.ToBase64String(salt);
             }
 
             currentUser.updatedAt = DateTime.UtcNow;

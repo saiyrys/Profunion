@@ -108,4 +108,4 @@ C:\Users\Павел\Desktop\Profunions\src\profunion.API\bin\Debug\net6.0\profun
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\bin\Debug\net6.0\FluentEmail.Core.dll
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\bin\Debug\net6.0\FluentEmail.Mailgun.dll
 C:\Users\Павел\Desktop\Profunions\src\profunion.API\bin\Debug\net6.0\RestSharp.dll
-C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\profunion.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Павел\Desktop\Profunions\src\profunion.API\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt

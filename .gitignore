@@ -1,2 +1,4 @@
 .vs
 profsouz-kst-backend
+**/obj/
+**/bin/

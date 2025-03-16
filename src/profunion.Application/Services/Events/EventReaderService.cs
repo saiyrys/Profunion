@@ -101,6 +101,7 @@ namespace profunion.Applications.Services.Events
                      date = DateTime.SpecifyKind(e.date, DateTimeKind.Utc),
                      link = e.link,
                      places = e.places,
+                     venue = e.venue,
                      isActive = e.isActive,
                      status = e.status,
                      createdAt = e.createdAt.ToString("yyyy-MM-dd"),

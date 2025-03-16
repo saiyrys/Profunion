@@ -41,6 +41,7 @@ using profunion.API.Background;
 using profunion.Applications.Interface.IEmailService;
 using profunion.Applications.Services.EmailService;
 using profunion.Domain.Constants;
+using profunion.Applications.Services.Auth.ResetPassword;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -64,7 +65,6 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<UserFactory, CreateUserFactory>();
 builder.Services.AddScoped<TokenGeneration>();
 builder.Services.AddScoped<IHashingPassword, HashingPassword>();
-builder.Services.AddScoped<IPasswordService, AuthService>();
 builder.Services.AddHttpContextAccessor();
 // Зависимости пользователя
 builder.Services.AddScoped<IUserService, UserService>();
@@ -91,8 +91,11 @@ builder.Services.AddHostedService<AddFileService>();
 
 
 // Зависимости для почты
-builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IEmailAuthSender, EmailAuthSender>();
+builder.Services.AddScoped<IResetPasswordMethods, ResetPasswordMethods>();
+builder.Services.AddScoped<IEmailResetSender, EmailResetSender>();
 builder.Services.AddSingleton<AuthCodeCache>();
+builder.Services.AddSingleton<CacheResetToken>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -167,18 +170,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
-builder.WebHost.ConfigureKestrel(options =>
+/*builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(5000); // Разрешаем прослушивание на всех интерфейсах
-});
+});*/
 
 var app = builder.Build();
 app.UseCors("AllowSpecificOrigins");
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-app.UseHttpsRedirection();
-
-
-
+/*app.UseHttpsRedirection();*/
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -187,7 +187,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-/*app.UseHttpsRedirection();*/
 
 app.UseAuthentication();
 app.UseAuthorization();
