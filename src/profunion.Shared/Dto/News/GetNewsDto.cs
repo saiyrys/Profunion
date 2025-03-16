@@ -13,7 +13,6 @@ namespace profunion.Shared.Dto.News
     {
         public string newsId { get; set; }
         public string title { get; set; }
-        public string description { get; set; }
         public string content { get; set; }
         public List<GetUploadsDto> images { get; set; }
         public DateTime createdAt { get; set; }
@@ -25,7 +24,6 @@ namespace profunion.Shared.Dto.News
             return new List<string>
             {
                 title,
-                description,
                 content,
             };
         }

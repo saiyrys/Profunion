@@ -9,7 +9,6 @@ namespace profunion.Shared.Dto.News
     public class CreateNewsDto
     {
         public string title { get; set; }
-        public string description { get; set; }
         public string content { get; set; }
         public List<string> imagesId { get; set; }
     }

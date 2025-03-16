@@ -2799,10 +2799,6 @@
             "type": "string",
             "nullable": true
           },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
           "content": {
             "type": "string",
             "nullable": true
@@ -2825,10 +2821,6 @@
             "nullable": true
           },
           "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
             "type": "string",
             "nullable": true
           },
@@ -3106,10 +3098,6 @@
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
             "type": "string",
             "nullable": true
           },
