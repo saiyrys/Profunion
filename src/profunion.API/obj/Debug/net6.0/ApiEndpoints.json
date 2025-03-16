@@ -734,6 +734,96 @@
     ]
   },
   {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadAgrementComission",
+    "RelativePath": "api/documents/agreement/comission",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadAgrementStepOn",
+    "RelativePath": "api/documents/agreement/step-on-KD",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadCharter",
+    "RelativePath": "api/documents/charter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadAppDocument",
+    "RelativePath": "api/documents/labour/apps",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadLabourRecomendtation",
+    "RelativePath": "api/documents/labour/recomendation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadRuling",
+    "RelativePath": "api/documents/labour/ruling",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadPresentation",
+    "RelativePath": "api/documents/presentation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadEnterFile",
+    "RelativePath": "api/documents/statement/enter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "profunion.API.Controllers.documentsController",
+    "Method": "DownloadExit",
+    "RelativePath": "api/documents/statement/exit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "profunion.API.Controllers.downloadController",
     "Method": "DownloadInstaller",
     "RelativePath": "api/download",

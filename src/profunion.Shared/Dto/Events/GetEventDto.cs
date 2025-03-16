@@ -18,7 +18,7 @@ namespace profunion.Shared.Dto.Events
         public bool isActive { get; set; }
         public string status { get; set; }
         public int places { get; set; }
-        public string venue { get; set; }
+        public string? address { get; set; }
         public string createdAt { get; set; }
         public string updatedAt { get; set; }
 
@@ -28,7 +28,7 @@ namespace profunion.Shared.Dto.Events
             {
                 title,
                 organizer,
-                venue
+                address
             };
         }
     }

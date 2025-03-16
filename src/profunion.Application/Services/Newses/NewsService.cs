@@ -162,7 +162,6 @@ namespace profunion.Applications.Services.Newses
                  {
                      newsId = n.newsId,
                      title = n.title,
-                     description = n.description,
                      content = n.content,
                      views = n.views,
                      createdAt = n.createdAt,

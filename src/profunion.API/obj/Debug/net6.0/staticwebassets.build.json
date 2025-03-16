@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XJ9pLSNgUuyGG11t4rnLT/TmKwWo++rTIxhHs7XA6zI=",
+  "Hash": "GZGQLAWWQrKS70oWesG+8adegdos9vUVT5wOHqhwasU=",
   "Source": "profunion.API",
   "BasePath": "_content/profunion.API",
   "Mode": "Default",
@@ -16,6 +16,195 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\13-12_Постановление_об_уполномоченном_ОТ.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/13-12_Постановление_об_уполномоченном_ОТ#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i4z8a102nn",
+      "Integrity": "Li5fW7BGfFOP+GwlC5tlV8egIYSyL7oXTl2TyMaf1dM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\13-12_Постановление_об_уполномоченном_ОТ.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kbvyfy0h5m",
+      "Integrity": "EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-вступлении-в-профсоюз.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/Заявление-о-вступлении-в-профсоюз#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ecj12ncbsy",
+      "Integrity": "LpbO/1DyMR0WE9X7G2Ps+Xw7BhdllF3wmYUoGNOZro8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Заявление-о-вступлении-в-профсоюз.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-выходе-из-профсоюза.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/Заявление-о-выходе-из-профсоюза#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4ndpgvvujo",
+      "Integrity": "UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Заявление-о-выходе-из-профсоюза.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-Комиссии.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/Положение-о-Комиссии#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mcph5a36wa",
+      "Integrity": "aiheJT6a/bGjis+aT/li8iOn0FSOC92DdLE1+LBAodc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Положение-о-Комиссии.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-порядке-переговоров-по-КД.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/Положение-о-порядке-переговоров-по-КД#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "629cyq5jbt",
+      "Integrity": "Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Положение-о-порядке-переговоров-по-КД.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Приложения_к_колдог-1.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/Приложения_к_колдог-1#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ol4swdmfa",
+      "Integrity": "trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Приложения_к_колдог-1.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3t2nnz92h0",
+      "Integrity": "CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Рекомендации-по-примерному-содержанию.pdf",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Documents/Рекомендации-по-примерному-содержанию#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jn00htlh2a",
+      "Integrity": "T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Рекомендации-по-примерному-содержанию.pdf"
+    },
     {
       "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
       "SourceId": "profunion.API",
@@ -39,6 +228,744 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "Documents/13-12_Постановление_об_уполномоченном_ОТ.i4z8a102nn.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\13-12_Постановление_об_уполномоченном_ОТ.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Li5fW7BGfFOP+GwlC5tlV8egIYSyL7oXTl2TyMaf1dM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i4z8a102nn"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/13-12_Постановление_об_уполномоченном_ОТ.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Li5fW7BGfFOP+GwlC5tlV8egIYSyL7oXTl2TyMaf1dM="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/13-12_Постановление_об_уполномоченном_ОТ.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\13-12_Постановление_об_уполномоченном_ОТ.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Li5fW7BGfFOP+GwlC5tlV8egIYSyL7oXTl2TyMaf1dM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Li5fW7BGfFOP+GwlC5tlV8egIYSyL7oXTl2TyMaf1dM="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.kbvyfy0h5m.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "714972"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kbvyfy0h5m"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "714972"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Заявление-о-вступлении-в-профсоюз.ecj12ncbsy.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-вступлении-в-профсоюз.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LpbO/1DyMR0WE9X7G2Ps+Xw7BhdllF3wmYUoGNOZro8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ecj12ncbsy"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/Заявление-о-вступлении-в-профсоюз.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LpbO/1DyMR0WE9X7G2Ps+Xw7BhdllF3wmYUoGNOZro8="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Заявление-о-вступлении-в-профсоюз.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-вступлении-в-профсоюз.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LpbO/1DyMR0WE9X7G2Ps+Xw7BhdllF3wmYUoGNOZro8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LpbO/1DyMR0WE9X7G2Ps+Xw7BhdllF3wmYUoGNOZro8="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Заявление-о-выходе-из-профсоюза.4ndpgvvujo.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-выходе-из-профсоюза.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4ndpgvvujo"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/Заявление-о-выходе-из-профсоюза.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Заявление-о-выходе-из-профсоюза.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-выходе-из-профсоюза.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Положение-о-Комиссии.mcph5a36wa.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-Комиссии.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "161495"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aiheJT6a/bGjis+aT/li8iOn0FSOC92DdLE1+LBAodc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mcph5a36wa"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/Положение-о-Комиссии.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aiheJT6a/bGjis+aT/li8iOn0FSOC92DdLE1+LBAodc="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Положение-о-Комиссии.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-Комиссии.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "161495"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aiheJT6a/bGjis+aT/li8iOn0FSOC92DdLE1+LBAodc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aiheJT6a/bGjis+aT/li8iOn0FSOC92DdLE1+LBAodc="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Положение-о-порядке-переговоров-по-КД.629cyq5jbt.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-порядке-переговоров-по-КД.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "153860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "629cyq5jbt"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/Положение-о-порядке-переговоров-по-КД.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Положение-о-порядке-переговоров-по-КД.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-порядке-переговоров-по-КД.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "153860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Приложения_к_колдог-1.6ol4swdmfa.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Приложения_к_колдог-1.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108204"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ol4swdmfa"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/Приложения_к_колдог-1.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Приложения_к_колдог-1.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Приложения_к_колдог-1.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108204"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.3t2nnz92h0.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11602723"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3t2nnz92h0"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11602723"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:48:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Рекомендации-по-примерному-содержанию.jn00htlh2a.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Рекомендации-по-примерному-содержанию.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "284500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jn00htlh2a"
+        },
+        {
+          "Name": "label",
+          "Value": "Documents/Рекомендации-по-примерному-содержанию.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc="
+        }
+      ]
+    },
+    {
+      "Route": "Documents/Рекомендации-по-примерному-содержанию.pdf",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Рекомендации-по-примерному-содержанию.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "284500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 11:49:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc="
+        }
+      ]
+    },
     {
       "Route": "installers/profunion-v1.2.1-setup.exe",
       "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",

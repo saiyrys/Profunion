@@ -37,17 +37,22 @@ namespace profunion.Infrastructure.Persistance.Repository
             {
                 existingApplication.Places += places; // Обновляем запись, а не создаем новую
 
-                if(@event.places < places)
+                if(places > @event.places)
                 {
                     throw new InvalidOperationException("У мероприятия закончились места");
                 }
 
                 @event.places -= places; // Уменьшаем места в мероприятии
+                
+                model.UpdatedAt = DateTime.UtcNow;
 
+                _context.Update(model);
                 _context.Update(user);
                 _context.Update(@event);
 
                 return await SaveAsync();
+
+                
             }
 
             // Если заявки ещё нет, создаём её

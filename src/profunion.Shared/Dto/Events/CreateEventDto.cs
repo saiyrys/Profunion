@@ -21,6 +21,6 @@
 
         public int? places { get; set; }
 
-        public string venue { get; set; }
+        public string? address { get; set; }
     }
 }

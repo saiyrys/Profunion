@@ -1262,6 +1262,114 @@
         }
       }
     },
+    "/api/documents/presentation": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/statement/enter": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/statement/exit": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/agreement/comission": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/agreement/step-on-KD": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/labour/recomendation": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/labour/apps": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/labour/ruling": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/documents/charter": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/download": {
       "get": {
         "tags": [
@@ -2785,7 +2893,7 @@
             "format": "int32",
             "nullable": true
           },
-          "venue": {
+          "address": {
             "type": "string",
             "nullable": true
           }
@@ -3067,7 +3175,7 @@
             "format": "int32",
             "nullable": true
           },
-          "venue": {
+          "address": {
             "type": "string",
             "nullable": true
           },

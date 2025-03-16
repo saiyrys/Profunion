@@ -10,7 +10,7 @@
         public string? link { get; set; }
         public List<string>? categoriesId { get; set; }
         public int? places { get; set; }
-        public string venue { get; set; }
+        public string? address { get; set; }
         public bool? isActive { get; set; }
         public string? status { get; set; }
     }

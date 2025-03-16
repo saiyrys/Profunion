@@ -1,6 +1,42 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\13-12_Постановление_об_уполномоченном_ОТ.pdf",
+      "PackagePath": "staticwebassets\\Documents\\13-12_Постановление_об_уполномоченном_ОТ.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf",
+      "PackagePath": "staticwebassets\\Documents\\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-вступлении-в-профсоюз.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Заявление-о-вступлении-в-профсоюз.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Заявление-о-выходе-из-профсоюза.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Заявление-о-выходе-из-профсоюза.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf",
+      "PackagePath": "staticwebassets\\Documents\\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-Комиссии.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Положение-о-Комиссии.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Положение-о-порядке-переговоров-по-КД.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Положение-о-порядке-переговоров-по-КД.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Приложения_к_колдог-1.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Приложения_к_колдог-1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Documents\\Рекомендации-по-примерному-содержанию.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Рекомендации-по-примерному-содержанию.pdf"
+    },
+    {
       "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
       "PackagePath": "staticwebassets\\installers\\profunion-v1.2.1-setup.exe"
     },

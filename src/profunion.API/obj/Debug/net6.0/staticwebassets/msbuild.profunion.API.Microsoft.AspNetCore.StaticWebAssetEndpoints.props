@@ -1,5 +1,113 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/13-12_Постановление_об_уполномоченном_ОТ.i4z8a102nn.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\13-12_Постановление_об_уполномоченном_ОТ.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i4z8a102nn"},{"Name":"integrity","Value":"sha256-Li5fW7BGfFOP\u002BGwlC5tlV8egIYSyL7oXTl2TyMaf1dM="},{"Name":"label","Value":"_content/profunion.API/Documents/13-12_\u041F\u043E\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435_\u043E\u0431_\u0443\u043F\u043E\u043B\u043D\u043E\u043C\u043E\u0447\u0435\u043D\u043D\u043E\u043C_\u041E\u0422.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"604476"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Li5fW7BGfFOP\u002BGwlC5tlV8egIYSyL7oXTl2TyMaf1dM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/13-12_Постановление_об_уполномоченном_ОТ.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\13-12_Постановление_об_уполномоченном_ОТ.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Li5fW7BGfFOP\u002BGwlC5tlV8egIYSyL7oXTl2TyMaf1dM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"604476"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Li5fW7BGfFOP\u002BGwlC5tlV8egIYSyL7oXTl2TyMaf1dM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.kbvyfy0h5m.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kbvyfy0h5m"},{"Name":"integrity","Value":"sha256-EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg="},{"Name":"label","Value":"_content/profunion.API/Documents/8.1.\u0423\u0441\u0442\u0430\u0432-\u041F\u0440\u043E\u0444\u0441\u043E\u044E\u0437\u0430_\u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u043D-\u041C\u0438\u043D\u044E\u0441\u0442\u043E\u043C-\u0420\u043E\u0441\u0441\u0438\u0438-1.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"714972"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\8.1.Устав-Профсоюза_зарегистрирован-Минюстом-России-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"714972"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022EEoCz8kEnlFIlftlJ2WHiNcTmgWvzE8rEjXbpVnBcsg=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Заявление-о-вступлении-в-профсоюз.ecj12ncbsy.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Заявление-о-вступлении-в-профсоюз.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ecj12ncbsy"},{"Name":"integrity","Value":"sha256-LpbO/1DyMR0WE9X7G2Ps\u002BXw7BhdllF3wmYUoGNOZro8="},{"Name":"label","Value":"_content/profunion.API/Documents/\u0417\u0430\u044F\u0432\u043B\u0435\u043D\u0438\u0435-\u043E-\u0432\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0438-\u0432-\u043F\u0440\u043E\u0444\u0441\u043E\u044E\u0437.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"122267"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022LpbO/1DyMR0WE9X7G2Ps\u002BXw7BhdllF3wmYUoGNOZro8=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Заявление-о-вступлении-в-профсоюз.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Заявление-о-вступлении-в-профсоюз.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LpbO/1DyMR0WE9X7G2Ps\u002BXw7BhdllF3wmYUoGNOZro8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"122267"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022LpbO/1DyMR0WE9X7G2Ps\u002BXw7BhdllF3wmYUoGNOZro8=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Заявление-о-выходе-из-профсоюза.4ndpgvvujo.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Заявление-о-выходе-из-профсоюза.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4ndpgvvujo"},{"Name":"integrity","Value":"sha256-UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0="},{"Name":"label","Value":"_content/profunion.API/Documents/\u0417\u0430\u044F\u0432\u043B\u0435\u043D\u0438\u0435-\u043E-\u0432\u044B\u0445\u043E\u0434\u0435-\u0438\u0437-\u043F\u0440\u043E\u0444\u0441\u043E\u044E\u0437\u0430.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"95673"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Заявление-о-выходе-из-профсоюза.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Заявление-о-выходе-из-профсоюза.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"95673"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022UG33H/O3vLgCh2OO4/VerrukU8WzUSS7fRM6gBMRIv0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Положение-о-Комиссии.mcph5a36wa.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Положение-о-Комиссии.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mcph5a36wa"},{"Name":"integrity","Value":"sha256-aiheJT6a/bGjis\u002BaT/li8iOn0FSOC92DdLE1\u002BLBAodc="},{"Name":"label","Value":"_content/profunion.API/Documents/\u041F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435-\u043E-\u041A\u043E\u043C\u0438\u0441\u0441\u0438\u0438.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"161495"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022aiheJT6a/bGjis\u002BaT/li8iOn0FSOC92DdLE1\u002BLBAodc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Положение-о-Комиссии.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Положение-о-Комиссии.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-aiheJT6a/bGjis\u002BaT/li8iOn0FSOC92DdLE1\u002BLBAodc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"161495"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022aiheJT6a/bGjis\u002BaT/li8iOn0FSOC92DdLE1\u002BLBAodc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Положение-о-порядке-переговоров-по-КД.629cyq5jbt.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Положение-о-порядке-переговоров-по-КД.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"629cyq5jbt"},{"Name":"integrity","Value":"sha256-Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo="},{"Name":"label","Value":"_content/profunion.API/Documents/\u041F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435-\u043E-\u043F\u043E\u0440\u044F\u0434\u043A\u0435-\u043F\u0435\u0440\u0435\u0433\u043E\u0432\u043E\u0440\u043E\u0432-\u043F\u043E-\u041A\u0414.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"153860"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Положение-о-порядке-переговоров-по-КД.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Положение-о-порядке-переговоров-по-КД.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"153860"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Ii0iL6Gd6LLx1kaNntctx5ndRUXMxwlb/WGJ4L8EJPo=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Приложения_к_колдог-1.6ol4swdmfa.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Приложения_к_колдог-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6ol4swdmfa"},{"Name":"integrity","Value":"sha256-trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI="},{"Name":"label","Value":"_content/profunion.API/Documents/\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F_\u043A_\u043A\u043E\u043B\u0434\u043E\u0433-1.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"108204"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Приложения_к_колдог-1.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Приложения_к_колдог-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"108204"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022trI5X5zQCw0D125GxKliJjBXdznSynkBAUNsnwizYsI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.3t2nnz92h0.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3t2nnz92h0"},{"Name":"integrity","Value":"sha256-CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME="},{"Name":"label","Value":"_content/profunion.API/Documents/\u041F\u0423\u0411\u041B\u0418\u0427\u041D\u042B\u0419-\u0414\u041E\u041A\u041B\u0410\u0414-2022-\u0422\u041E\u0423\u0413\u0421\u041E.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"11602723"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\ПУБЛИЧНЫЙ-ДОКЛАД-2022-ТОУГСО.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"11602723"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022CZ9Yjbfhsuj9ouZab6u58ZgPFserTec/0ni6VkaN5ME=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:48:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Рекомендации-по-примерному-содержанию.jn00htlh2a.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Рекомендации-по-примерному-содержанию.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jn00htlh2a"},{"Name":"integrity","Value":"sha256-T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc="},{"Name":"label","Value":"_content/profunion.API/Documents/\u0420\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0430\u0446\u0438\u0438-\u043F\u043E-\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E\u043C\u0443-\u0441\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u044E.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"284500"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Documents/Рекомендации-по-примерному-содержанию.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Documents\Рекомендации-по-примерному-содержанию.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"284500"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022T9jw1m36SmYQW7ZmqsjrZFjNEgqTMMefToNHcN0Qvvc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 11:49:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/installers/profunion-v1.2.1-setup.exe">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\installers\profunion-v1.2.1-setup.exe'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
