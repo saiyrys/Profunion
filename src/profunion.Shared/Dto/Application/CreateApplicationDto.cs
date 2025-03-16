@@ -10,7 +10,7 @@ namespace profunion.Shared.Dto.Application
     {
         public string eventId { get; set; }
 
-        public long userId { get; set; }
+        public string userId { get; set; }
 
         public int places { get; set; }
 

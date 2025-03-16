@@ -846,17 +846,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/SendEmailReset"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/SendEmailReset"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/SendEmailReset"
               }
             }
           }
@@ -944,17 +944,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/ResetNewPassword"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/ResetNewPassword"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/ResetNewPassword"
               }
             }
           }
@@ -1258,114 +1258,6 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/api/documents/presentation": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/statement/enter": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/statement/exit": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/agreement/comission": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/agreement/step-on-KD": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/labour/recomendation": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/labour/apps": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/labour/ruling": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/documents/charter": {
-      "get": {
-        "tags": [
-          "documents"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
           }
         }
       }
@@ -2823,8 +2715,8 @@
             "nullable": true
           },
           "userId": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "nullable": true
           },
           "places": {
             "type": "integer",
@@ -3066,6 +2958,26 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResetNewPassword": {
+        "type": "object",
+        "properties": {
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendEmailReset": {
+        "type": "object",
+        "properties": {
+          "email": {
             "type": "string",
             "nullable": true
           }

@@ -197,20 +197,20 @@ namespace profunion.API.Controllers
         [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> EmailForReset([FromBody] string email)
+        public async Task<IActionResult> EmailForReset([FromBody] SendEmailReset dto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (string.IsNullOrEmpty(email))
+            if (string.IsNullOrEmpty(dto.email))
             {
                 ModelState.AddModelError(" ", "Почта не может быть пустой");
                 return StatusCode(422, ModelState);
             }
 
-            await _passwordService.RequestPasswordReset(email);
+            await _passwordService.RequestPasswordReset(dto.email);
 
             return Ok("письмо успешно отправлено");
         }
@@ -220,7 +220,7 @@ namespace profunion.API.Controllers
         [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> ResetPassword(string token, [FromBody] string newPassword)
+        public async Task<IActionResult> ResetPassword(string token, [FromBody] ResetNewPassword dto)
         {
             if (!ModelState.IsValid)
             {
@@ -233,7 +233,7 @@ namespace profunion.API.Controllers
                 return StatusCode(422, ModelState);
             }
 
-            await _passwordService.ResetPasswordByToken(token, newPassword);
+            await _passwordService.ResetPasswordByToken(token, dto.newPassword);
 
             return Ok("Пароль успешно изменен");
         }
