@@ -46,7 +46,7 @@ namespace profunion.Infrastructure.Persistance.Repository
                 
                 model.UpdatedAt = DateTime.UtcNow;
 
-                _context.Update(model);
+/*                _context.Update(model);*/
                 _context.Update(user);
                 _context.Update(@event);
 
