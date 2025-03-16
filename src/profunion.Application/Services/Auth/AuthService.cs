@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using profunion.Applications.Interface.IAuth;
-using profunion.Applications.Interface.IEmailService;
 using profunion.Applications.Services.EmailService;
 using profunion.Domain.Factories.Users;
 using profunion.Domain.Models.UserModels;
@@ -27,24 +26,16 @@ namespace profunion.Applications.Services.Auth
 
         private readonly IUserRepository _userRepository;
 
-        private readonly IEmailAuthSender _emailSender;
-
         public AuthService(IControl<User> control,
             TokenGeneration generateToken, IHashingPassword hashingPassword,
-            IMapper mapper, UserFactory userFactory, IUserRepository userRepository,
-             IEmailAuthSender emailSender)
+            IMapper mapper, UserFactory userFactory, IUserRepository userRepository)
         {
             _control = control;
             _generateToken = generateToken;
             _hashingPassword = hashingPassword;
             _mapper = mapper;
-
             _userFactory = userFactory;
-
             _userRepository = userRepository;
-
-            _emailSender = emailSender;
-
         }
 
         public async Task<LoginResponseDto> Login(LoginUserDto loginUser)
@@ -152,27 +143,5 @@ namespace profunion.Applications.Services.Auth
 
         private async Task<bool> ValidatePassword(string loginPassword, string dbPassword, string salt)
             => await _hashingPassword.VerifyPassword(loginPassword, dbPassword, salt);
-
-        public async Task<bool> ChangePassword(ChangePasswordDto dto)
-        {
-            string token = await _control.VerifyByTokenAsync();
-            var currentUser = await _control.FindByTokenAsync(token);
-
-            var user = await _userRepository.GetByIdAsync(currentUser.userId);
-
-            // Проверяем старый пароль
-            if (!await ValidatePassword(dto.currentPassword, user.password, user.salt))
-                throw new UnauthorizedAccessException();
-
-            // Хешируем новый пароль
-            var (newPass, salt) = await _hashingPassword.HashPassword(dto.newPassword);
-            user.password = newPass;
-            user.salt = Convert.ToBase64String(salt);
-
-            await _userRepository.UpdateAsync(user);
-            return true;
-        }
-
-
     }
 }
