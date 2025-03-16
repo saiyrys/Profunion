@@ -7,13 +7,14 @@ using profunion.Domain.Models.UserModels;
 using profunion.Domain.Persistance;
 using profunion.Infrastructure.SomeService.HashPassword;
 using profunion.Shared.Dto.Auth;
+using profunion.Shared.Dto.Auth.PWD;
 using profunion.Shared.Dto.Users;
 using SendGrid.Helpers.Errors.Model;
 
 
 namespace profunion.Applications.Services.Auth
 {
-    public class AuthService : IAuthService, IPasswordService
+    public class AuthService : IAuthService
     {
         private readonly IControl<User> _control;
 
@@ -26,12 +27,12 @@ namespace profunion.Applications.Services.Auth
 
         private readonly IUserRepository _userRepository;
 
-        private readonly IEmailSender _emailSender;
+        private readonly IEmailAuthSender _emailSender;
 
         public AuthService(IControl<User> control,
             TokenGeneration generateToken, IHashingPassword hashingPassword,
             IMapper mapper, UserFactory userFactory, IUserRepository userRepository,
-             IEmailSender emailSender)
+             IEmailAuthSender emailSender)
         {
             _control = control;
             _generateToken = generateToken;
@@ -114,9 +115,9 @@ namespace profunion.Applications.Services.Auth
             return true;
         }
 
-        public async Task<UserInfoDto> GetUser(string token)
+        public async Task<UserInfoDto> GetUser()
         {
-            var accessToken = await _control.VerifyByTokenAsync();
+            string token = await _control.VerifyByTokenAsync();
 
             if (string.IsNullOrEmpty(token))
                 throw new ArgumentNullException("Token is unregister");
@@ -152,26 +153,26 @@ namespace profunion.Applications.Services.Auth
         private async Task<bool> ValidatePassword(string loginPassword, string dbPassword, string salt)
             => await _hashingPassword.VerifyPassword(loginPassword, dbPassword, salt);
 
-        public async Task<bool> ChangePassword(string token, long userId, string password)
+        public async Task<bool> ChangePassword(ChangePasswordDto dto)
         {
+            string token = await _control.VerifyByTokenAsync();
             var currentUser = await _control.FindByTokenAsync(token);
 
-            if (currentUser.role == "ADMIN" || currentUser.userId == userId)
-            {
-                var user = await _userRepository.GetByIdAsync(userId);
+            var user = await _userRepository.GetByIdAsync(currentUser.userId);
 
-                var (newPass, salt) = await _hashingPassword.HashPassword(password);
-                user.password = newPass;
-                user.salt = Convert.ToBase64String(salt);
+            // Проверяем старый пароль
+            if (!await ValidatePassword(dto.currentPassword, user.password, user.salt))
+                throw new UnauthorizedAccessException();
 
-                await _userRepository.UpdateAsync(user);
+            // Хешируем новый пароль
+            var (newPass, salt) = await _hashingPassword.HashPassword(dto.newPassword);
+            user.password = newPass;
+            user.salt = Convert.ToBase64String(salt);
 
-                return true;
-            }
-
-            throw new UnauthorizedAccessException();
+            await _userRepository.UpdateAsync(user);
+            return true;
         }
 
-        
+
     }
 }

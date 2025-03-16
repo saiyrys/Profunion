@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using profunion.Applications.Interface.IAuth;
 using profunion.Applications.Interface.IEmailService;
+using profunion.Domain.Models.UserModels;
 using profunion.Shared.Dto.Auth;
+using profunion.Shared.Dto.Auth.PWD;
 
 
 namespace profunion.API.Controllers
@@ -12,14 +14,16 @@ namespace profunion.API.Controllers
     public class AuthController : Controller
     {
         private readonly IAuthService _authService;
-        private readonly IEmailSender _emailSender;
-        private readonly IPasswordService _passwordService;
+        private readonly IEmailAuthSender _emailSender;
+        private readonly IControl<User> _control;
+        private readonly IResetPasswordMethods _passwordService;
 
-        public AuthController(IAuthService authService, IPasswordService passwordService, IEmailSender emailSender)
+        public AuthController(IAuthService authService, IResetPasswordMethods passwordService, IEmailAuthSender emailSender, IControl<User> control)
         {
             _authService = authService;
             _passwordService = passwordService;
             _emailSender = emailSender;
+            _control = control;
         }
 
         [HttpPost("login")]
@@ -126,37 +130,15 @@ namespace profunion.API.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetUserInfoByToken()
         {
-            var token = HttpContext.Request.Cookies["accessToken"];
+            var user = await _authService.GetUser();
 
-            if (string.IsNullOrEmpty(token) && HttpContext.Request.Headers.ContainsKey("authorization"))
+            // Если пользователя не нашли — ошибка 404
+            if (user == null)
             {
-                var authHeader = HttpContext.Request.Headers["authorization"].ToString();
-                Console.WriteLine($"Authorization header: {authHeader}"); // Лог для проверки
-
-                if (authHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
-                {
-                    token = authHeader.Substring("Bearer ".Length).Trim();
-                }
-
-                var userT = await _authService.GetUser(token);
-
-                var roleT = new ReturnRole
-                {
-                    role = userT.role
-                };
-
-                return Ok(roleT);
+                return NotFound(new { message = "User not found or token is invalid." });
             }
 
-            var user = await _authService.GetUser(token);
-
-            var role = new ReturnRole
-            {
-                role = user.role
-            };
-
-            return Ok(role);
-
+            return Ok(new ReturnRole { role = user.role });
 
         }
 
@@ -182,26 +164,19 @@ namespace profunion.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("change_password")]
+        [HttpPost("change-password")]
+        [Authorize]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> ChangePassword(string Id, string password)
+        public async Task<IActionResult> ChangePassword(ChangePasswordDto dto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            string token = HttpContext.Request.Cookies["accessToken"];
-
-
-            if (string.IsNullOrEmpty(token))
-                return BadRequest("Unathorized");
-
-            long userId = long.Parse(Id);
-
-            await _passwordService.ChangePassword(token, userId, password);
+            await _passwordService.ChangePassword(dto);
 
             return Ok(true);
         }
@@ -215,6 +190,52 @@ namespace profunion.API.Controllers
             Response.Cookies.Delete("refreshToken");
 
             return Ok(true);
+        }
+
+        [HttpPost("email/request-reset")]
+        [AllowAnonymous]
+        [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> EmailForReset([FromBody] string email)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (string.IsNullOrEmpty(email))
+            {
+                ModelState.AddModelError(" ", "Почта не может быть пустой");
+                return StatusCode(422, ModelState);
+            }
+
+            await _passwordService.RequestPasswordReset(email);
+
+            return Ok("письмо успешно отправлено");
+        }
+
+        [HttpPost("email/reset-password/{token}")]
+        [AllowAnonymous]
+        [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> ResetPassword(string token, [FromBody] string newPassword)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (string.IsNullOrEmpty(token))
+            {
+                ModelState.AddModelError(" ", "Почта не может быть пустой");
+                return StatusCode(422, ModelState);
+            }
+
+            await _passwordService.ResetPasswordByToken(token, newPassword);
+
+            return Ok("Пароль успешно изменен");
         }
     }
 }

@@ -20,5 +20,7 @@
         public string? status { get; set; }
 
         public int? places { get; set; }
+
+        public string venue { get; set; }
     }
 }

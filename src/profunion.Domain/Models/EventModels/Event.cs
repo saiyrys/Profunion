@@ -22,6 +22,7 @@ namespace profunion.Domain.Models.EventModels
         public DateTime date { get; set; }
         public string link { get; set; }
         public int totalPlaces { get; set; }
+        public string venue { get; set; }
         public int places { get; set; }
         public bool isActive { get; set; }
         public string status { get; set; }

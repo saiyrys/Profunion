@@ -6,6 +6,7 @@ using profunion.Applications.Interface.IUser;
 using profunion.Domain.Models.UserModels;
 using profunion.Domain.Persistance;
 using profunion.Infrastructure.Persistance.Repository;
+using profunion.Shared.Dto.Auth;
 using profunion.Shared.Dto.Users;
 
 namespace profunion.API.Controllers
@@ -69,17 +70,15 @@ namespace profunion.API.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetUserProfile()
         {
-            string token = HttpContext.Request.Headers["authorization"];
+            var user = await _authService.GetUser();
 
-            if (token.StartsWith("Bearer"))
+            // Если пользователя не нашли — ошибка 404
+            if (user == null)
             {
-                token = token.Substring("Bearer ".Length).Trim();
-                var user = await _authService.GetUser(token);
-                
-                return Ok(user);
+                return NotFound(new { message = "User not found or token is invalid." });
             }
 
-            return NoContent();
+            return Ok(user);
         }
 
         [HttpGet("report")]

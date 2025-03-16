@@ -9,9 +9,9 @@ namespace profunion.API.Controllers
     [ApiController]
     public class EmailSender : Controller
     {
-        private readonly IEmailSender _emailSender;
+        private readonly IEmailAuthSender _emailSender;
 
-        public EmailSender(IEmailSender emailSender)
+        public EmailSender(IEmailAuthSender emailSender)
         {
             _emailSender = emailSender; 
         }
