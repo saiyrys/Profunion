@@ -35,6 +35,15 @@
             "projectReferences": {
               "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Application\\profunion.Applications.csproj": {
                 "projectPath": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Application\\profunion.Applications.csproj"
+              },
+              "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Domain\\profunion.Domain.csproj": {
+                "projectPath": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Domain\\profunion.Domain.csproj"
+              },
+              "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Infrastructure\\profunion.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Infrastructure\\profunion.Infrastructure.csproj"
+              },
+              "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Shared\\profunion.Shared.csproj": {
+                "projectPath": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.Shared\\profunion.Shared.csproj"
               }
             }
           }

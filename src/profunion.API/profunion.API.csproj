@@ -28,6 +28,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\profunion.Application\profunion.Applications.csproj" />
+    <ProjectReference Include="..\profunion.Domain\profunion.Domain.csproj" />
+    <ProjectReference Include="..\profunion.Infrastructure\profunion.Infrastructure.csproj" />
+	<ProjectReference Include="..\profunion.Shared\profunion.Shared.csproj" />
+
   </ItemGroup>
 
   <ItemGroup>
