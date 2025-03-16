@@ -198,7 +198,7 @@
             },
             "Microsoft.Extensions.Primitives": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
