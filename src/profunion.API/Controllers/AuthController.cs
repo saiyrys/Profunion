@@ -197,7 +197,7 @@ namespace profunion.API.Controllers
         [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> EmailForReset([FromBody] SendEmailReset dto)
+        public async Task<IActionResult> EmailForReset([FromBody]SendEmailReset dto)
         {
             if (!ModelState.IsValid)
             {
@@ -220,7 +220,7 @@ namespace profunion.API.Controllers
         [ProducesResponseType(204, Type = typeof(LoginResponseDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> ResetPassword(string token, [FromBody] ResetNewPassword dto)
+        public async Task<IActionResult> ResetPassword(string token, [FromBody]ResetNewPassword dto)
         {
             if (!ModelState.IsValid)
             {
