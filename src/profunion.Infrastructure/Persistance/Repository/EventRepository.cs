@@ -36,6 +36,8 @@ namespace profunion.Infrastructure.Persistance.Repository
 
         public async Task<bool> UpdateEntityAsync(Event model)
         {
+            model.totalPlaces = model.places;
+
             _dbSet.Update(model);
 
             return await SaveAsync();
