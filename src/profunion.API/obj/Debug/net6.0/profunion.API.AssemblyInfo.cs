@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("profunion.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6c3dd23c8d2d4df4c53b980e6a3fcd9cf9b11ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6f521a4c8c85eaf6aba93308b4a824913f5150b")]
 [assembly: System.Reflection.AssemblyProductAttribute("profunion.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("profunion.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

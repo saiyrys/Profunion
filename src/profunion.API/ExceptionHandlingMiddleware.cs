@@ -29,13 +29,9 @@
 
                 var responses = new
                 {
-                    response = new
-                    {
-                        data = new
-                        {
-                            message = _showDetailedErrors ? ex.Message : "Внутренняя ошибка сервера"
-                        }
-                    }
+                   
+                    message = _showDetailedErrors ? ex.Message : "Внутренняя ошибка сервера"
+
                 };
 
                 // Возвращаем ошибку с данными
