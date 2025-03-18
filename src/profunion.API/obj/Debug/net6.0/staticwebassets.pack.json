@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\EventInvitation.html",
+      "PackagePath": "staticwebassets\\Templates\\EventInvitation.html"
+    },
+    {
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\ResetPasswordEmail.html",
+      "PackagePath": "staticwebassets\\Templates\\ResetPasswordEmail.html"
+    },
+    {
       "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
       "PackagePath": "staticwebassets\\installers\\profunion-v1.2.1-setup.exe"
     },

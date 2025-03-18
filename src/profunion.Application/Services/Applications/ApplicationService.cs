@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using profunion.Applications.Interface.IApplications;
+using profunion.Applications.Interface.IEmailService;
 using profunion.Applications.Interface.IEvents.IService;
 using profunion.Domain.Models.ApplicationModels;
 using profunion.Domain.Models.NewsModels;
@@ -17,14 +18,16 @@ namespace profunion.Applications.Services.Applications
         private readonly IMapper _mapper;
         private readonly IPagination _pagination;
         private readonly ISortApplication _sortApplication;
+        private readonly IEmailEventSender _linkSender;
 
-        public ApplicationService(IApplicationRepository applicationRepository, IEventReaderService eventService, IMapper mapper,IPagination pagination, ISortApplication sortApplication)
+        public ApplicationService(IApplicationRepository applicationRepository, IEventReaderService eventService, IMapper mapper,IPagination pagination, ISortApplication sortApplication, IEmailEventSender linkSender)
         {
             _applicationRepository = applicationRepository;
             _eventService = eventService;
             _mapper = mapper;
             _pagination = pagination;
             _sortApplication = sortApplication;
+            _linkSender = linkSender;
         }
         public async Task<bool> CreateApplication(CreateApplicationDto createApplication)
         {
@@ -39,6 +42,10 @@ namespace profunion.Applications.Services.Applications
             {
                 throw new InvalidOperationException();
             }
+
+            long userId = long.Parse(createApplication.userId);
+
+            await _linkSender.SendUserEventLink(userId, createApplication.eventId);
 
             return true;
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XJ9pLSNgUuyGG11t4rnLT/TmKwWo++rTIxhHs7XA6zI=",
+  "Hash": "tsAjxGjpulw9PeZAZGX7973e5Um9NOhWXNZ78QWjTKs=",
   "Source": "profunion.API",
   "BasePath": "_content/profunion.API",
   "Mode": "Default",
@@ -36,6 +36,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\installers\\profunion-v1.2.1-setup.exe"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\EventInvitation.html",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Templates/EventInvitation#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aorrhwkxex",
+      "Integrity": "JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Templates\\EventInvitation.html"
+    },
+    {
+      "Identity": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\ResetPasswordEmail.html",
+      "SourceId": "profunion.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\",
+      "BasePath": "_content/profunion.API",
+      "RelativePath": "Templates/ResetPasswordEmail#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cevu9a5uzf",
+      "Integrity": "dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Templates\\ResetPasswordEmail.html"
     }
   ],
   "Endpoints": [
@@ -118,6 +160,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
+        }
+      ]
+    },
+    {
+      "Route": "Templates/EventInvitation.aorrhwkxex.html",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\EventInvitation.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:40:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aorrhwkxex"
+        },
+        {
+          "Name": "label",
+          "Value": "Templates/EventInvitation.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="
+        }
+      ]
+    },
+    {
+      "Route": "Templates/EventInvitation.html",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\EventInvitation.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:40:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="
+        }
+      ]
+    },
+    {
+      "Route": "Templates/ResetPasswordEmail.cevu9a5uzf.html",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\ResetPasswordEmail.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2866"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:00:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cevu9a5uzf"
+        },
+        {
+          "Name": "label",
+          "Value": "Templates/ResetPasswordEmail.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8="
+        }
+      ]
+    },
+    {
+      "Route": "Templates/ResetPasswordEmail.html",
+      "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\ResetPasswordEmail.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2866"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:00:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8="
         }
       ]
     }

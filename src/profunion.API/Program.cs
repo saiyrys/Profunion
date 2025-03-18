@@ -94,8 +94,10 @@ builder.Services.AddHostedService<AddFileService>();
 builder.Services.AddScoped<IEmailAuthSender, EmailAuthSender>();
 builder.Services.AddScoped<IResetPasswordMethods, ResetPasswordMethods>();
 builder.Services.AddScoped<IEmailResetSender, EmailResetSender>();
+builder.Services.AddScoped<IEmailEventSender, EmailEventSender>();
 builder.Services.AddSingleton<AuthCodeCache>();
 builder.Services.AddSingleton<CacheResetToken>();
+
 
 builder.Services.AddHttpContextAccessor();
 

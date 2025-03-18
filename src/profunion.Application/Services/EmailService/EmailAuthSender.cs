@@ -31,40 +31,13 @@ namespace profunion.Applications.Services.EmailService
 
             AuthCodeCache.UpdateCache(email, code);
 
-            var domain = string.Join(".", email.Split('@')[1].Split('.').TakeLast(2));
+            string subject = "Код авторизации для приложения";
 
-            var mailSettings = _configuration.GetSection("MailSettings:MailRu").Get<MailSettings>();
+            string body = $"Ваш код авторизации: {code}";
 
-            using var smtpClient = new SmtpClient(mailSettings.SmtpServer)
-            {
-                Port = mailSettings.Port,
-                Credentials = new NetworkCredential(mailSettings.Username, mailSettings.Password),
-                EnableSsl = mailSettings.EnableSsl,
-                DeliveryMethod = SmtpDeliveryMethod.Network
-            };
+            EmailSenderSettings sender = new EmailSenderSettings(_configuration);
 
-            var mailMessage = new MailMessage
-            {
-                From = new MailAddress(mailSettings.SenderEmail, mailSettings.SenderName),
-                Subject = "Код авторизации для приложения",
-                Body = $"Ваш код авторизации: {code}",
-                IsBodyHtml = false
-            };
-
-            mailMessage.To.Add(email);
-
-            try
-            {
-                // Отправляем письмо
-                await smtpClient.SendMailAsync(mailMessage);
-            }
-
-            catch (Exception ex)
-            {
-                // Логируем ошибку и сообщаем о неудаче
-                Console.WriteLine($"Ошибка при отправке письма: {ex.Message}");
-                throw new InvalidOperationException("Ошибка при отправке письма", ex);
-            }
+            await sender.SendMessage(email, subject, body);
         }
 
         private string GenerateAuthCode()

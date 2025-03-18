@@ -89,9 +89,14 @@ namespace profunion.Applications.Services.Auth.ResetPassword
 
             CacheResetToken.UpdateCache(token, email, TimeSpan.FromMinutes(15)); // Сохраняем токен
 
-            string resetLink = $"https://prof.profunions.ru/reset-password?token={token}";
+            string resetLink = $"https://profunions.ru/reset-password?token={token}";
 
-            await _resetSender.SendEmailResetPasswordAsync(email, $"Для сброса пароля перейдите по ссылке: {resetLink}");
+            string emailBody = LoadHtmlTemplate("ResetPasswordEmail.html", new Dictionary<string, string>
+            {
+                { "{{resetLink}}", resetLink }
+            });
+
+            await _resetSender.SendEmailResetPasswordAsync(email, emailBody);
         }
 
         private string GenerateSecureToken()
@@ -100,6 +105,24 @@ namespace profunion.Applications.Services.Auth.ResetPassword
             return Convert.ToBase64String(hmac.ComputeHash(Guid.NewGuid().ToByteArray()))
                 .TrimEnd('=').Replace('+', '-').Replace('/', '_');
         }
+
+        private string LoadHtmlTemplate(string templateName, Dictionary<string, string> replacements)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Templates", templateName);
+
+            if (!File.Exists(path))
+                throw new FileNotFoundException($"Шаблон {templateName} не найден.");
+
+            var template = File.ReadAllText(path);
+
+            foreach (var item in replacements)
+            {
+                template = template.Replace(item.Key, item.Value);
+            }
+
+            return template;
+        }
+
     }
 
 

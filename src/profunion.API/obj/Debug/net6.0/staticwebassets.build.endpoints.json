@@ -3,6 +3,170 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "Templates/EventInvitation.aorrhwkxex.html",
+      "AssetFile": "Templates/EventInvitation.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:40:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aorrhwkxex"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="
+        },
+        {
+          "Name": "label",
+          "Value": "Templates/EventInvitation.html"
+        }
+      ]
+    },
+    {
+      "Route": "Templates/EventInvitation.html",
+      "AssetFile": "Templates/EventInvitation.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:40:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="
+        }
+      ]
+    },
+    {
+      "Route": "Templates/ResetPasswordEmail.cevu9a5uzf.html",
+      "AssetFile": "Templates/ResetPasswordEmail.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2866"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:00:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cevu9a5uzf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8="
+        },
+        {
+          "Name": "label",
+          "Value": "Templates/ResetPasswordEmail.html"
+        }
+      ]
+    },
+    {
+      "Route": "Templates/ResetPasswordEmail.html",
+      "AssetFile": "Templates/ResetPasswordEmail.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2866"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 09:00:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dNsMRg+QeYxF+91LrGuJ1hI3xiwTNh6+/Hm05aH/Me8="
+        }
+      ]
+    },
+    {
       "Route": "installers/profunion-v1.2.1-setup.exe",
       "AssetFile": "installers/profunion-v1.2.1-setup.exe",
       "Selectors": [],
