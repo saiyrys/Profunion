@@ -31,7 +31,7 @@ namespace profunion.Infrastructure.Persistance.Repository
             var user = await _context.Application.FirstOrDefaultAsync(e => e.UserId == model.UserId);
             var @event = await _context.Events.FirstOrDefaultAsync(e => e.eventId == model.EventId);
 
-            /*if (@event == null) return false;*/ // Если мероприятия нет, ничего не делаем
+            if (@event == null) return false; // Если мероприятия нет, ничего не делаем
 
             if (existingApplication != null)
             {

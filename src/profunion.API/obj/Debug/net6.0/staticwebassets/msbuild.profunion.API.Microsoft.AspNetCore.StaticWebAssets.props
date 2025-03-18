@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d40l9ej6fe</Fingerprint>
-      <Integrity>I7v6+RhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=</Integrity>
+      <Fingerprint>4bmz6vpwyl</Fingerprint>
+      <Integrity>sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</OriginalItemSpec>

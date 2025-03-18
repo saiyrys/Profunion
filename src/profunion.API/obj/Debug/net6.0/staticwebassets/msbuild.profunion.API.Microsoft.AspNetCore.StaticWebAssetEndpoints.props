@@ -12,29 +12,29 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kkl8quv699"},{"Name":"integrity","Value":"sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="},{"Name":"label","Value":"_content/profunion.API/installers/profunion-v1.2.1-setup.exe"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"82576408"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 16:30:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.d40l9ej6fe.html">
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.4bmz6vpwyl.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d40l9ej6fe"},{"Name":"integrity","Value":"sha256-I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o="},{"Name":"label","Value":"_content/profunion.API/Templates/EventInvitation.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2373"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:57:57 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4bmz6vpwyl"},{"Name":"integrity","Value":"sha256-sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY="},{"Name":"label","Value":"_content/profunion.API/Templates/EventInvitation.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2390"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 16:55:01 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2373"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:57:57 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2390"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 16:55:01 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/ResetPasswordEmail.cevu9a5uzf.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\ResetPasswordEmail.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cevu9a5uzf"},{"Name":"integrity","Value":"sha256-dNsMRg\u002BQeYxF\u002B91LrGuJ1hI3xiwTNh6\u002B/Hm05aH/Me8="},{"Name":"label","Value":"_content/profunion.API/Templates/ResetPasswordEmail.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2866"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022dNsMRg\u002BQeYxF\u002B91LrGuJ1hI3xiwTNh6\u002B/Hm05aH/Me8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:00:15 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2866"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022dNsMRg\u002BQeYxF\u002B91LrGuJ1hI3xiwTNh6\u002B/Hm05aH/Me8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 16:54:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/ResetPasswordEmail.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\ResetPasswordEmail.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dNsMRg\u002BQeYxF\u002B91LrGuJ1hI3xiwTNh6\u002B/Hm05aH/Me8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2866"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022dNsMRg\u002BQeYxF\u002B91LrGuJ1hI3xiwTNh6\u002B/Hm05aH/Me8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:00:15 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2866"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022dNsMRg\u002BQeYxF\u002B91LrGuJ1hI3xiwTNh6\u002B/Hm05aH/Me8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 16:54:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
