@@ -61,7 +61,7 @@ namespace profunion.API.Controllers
 
             if (profile == null)
             {
-                return NotFound("Профиль пользователя не найден");
+                return NotFound("Пользователя не найден");
             }
 
             return Ok(profile);
@@ -83,7 +83,7 @@ namespace profunion.API.Controllers
             // Если пользователя не нашли — ошибка 404
             if (user == null)
             {
-                return Unauthorized(new { message = "User not found or token is invalid." });
+                return Unauthorized(new { message = "Пользователь не найден или не авторизован" });
             }
 
             return Ok(user);

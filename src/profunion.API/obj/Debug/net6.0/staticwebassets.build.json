@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tsAjxGjpulw9PeZAZGX7973e5Um9NOhWXNZ78QWjTKs=",
+  "Hash": "d7CwmHluAqVIcFcwzIKjAitEb1ivpWKyxCCY/ZWif3g=",
   "Source": "profunion.API",
   "BasePath": "_content/profunion.API",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "aorrhwkxex",
-      "Integrity": "JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=",
+      "Fingerprint": "d40l9ej6fe",
+      "Integrity": "I7v6+RhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Templates\\EventInvitation.html"
@@ -164,7 +164,7 @@
       ]
     },
     {
-      "Route": "Templates/EventInvitation.aorrhwkxex.html",
+      "Route": "Templates/EventInvitation.d40l9ej6fe.html",
       "AssetFile": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\Templates\\EventInvitation.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -174,7 +174,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2356"
+          "Value": "2373"
         },
         {
           "Name": "Content-Type",
@@ -182,11 +182,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\""
+          "Value": "\"I7v6+RhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:40:36 GMT"
+          "Value": "Tue, 18 Mar 2025 09:57:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -196,7 +196,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "aorrhwkxex"
+          "Value": "d40l9ej6fe"
         },
         {
           "Name": "label",
@@ -204,7 +204,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="
+          "Value": "sha256-I7v6+RhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o="
         }
       ]
     },
@@ -219,7 +219,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2356"
+          "Value": "2373"
         },
         {
           "Name": "Content-Type",
@@ -227,11 +227,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\""
+          "Value": "\"I7v6+RhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:40:36 GMT"
+          "Value": "Tue, 18 Mar 2025 09:57:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -241,7 +241,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="
+          "Value": "sha256-I7v6+RhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o="
         }
       ]
     },

@@ -27,16 +27,19 @@
                 // Устанавливаем статус ошибки
                 context.Response.StatusCode = 500;
 
-                var response = new
+                var responses = new
                 {
-                    data = new
+                    response = new
                     {
-                        message = _showDetailedErrors ? ex.Message : "Внутренняя ошибка сервера"
+                        data = new
+                        {
+                            message = _showDetailedErrors ? ex.Message : "Внутренняя ошибка сервера"
+                        }
                     }
                 };
 
                 // Возвращаем ошибку с данными
-                await context.Response.WriteAsJsonAsync(response);
+                await context.Response.WriteAsJsonAsync(responses);
             }
         }
     }

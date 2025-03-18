@@ -26,7 +26,7 @@ namespace profunion.API.Controllers
         public async Task<IActionResult> Create(CreateCategoriesDto category)
         {
             if (category is null)
-                throw new BadRequestException("unfilled");
+                throw new BadRequestException("Поле не заполнено");
 
             var categories = await _category.CreateCategories(category);
 
@@ -58,7 +58,7 @@ namespace profunion.API.Controllers
         {
             if (updateCategory == null)
             {
-                return BadRequest("Invalid data.");
+                return BadRequest("Неправильные данные");
             }
 
             var categoryToUpdate = await _category.UpdateCategory(categoryId, updateCategory);
@@ -69,7 +69,7 @@ namespace profunion.API.Controllers
             }
             else
             {
-                return StatusCode(500, "A problem happened while handling your request.");
+                return StatusCode(500, "Проблема произошла во время обработки запроса");
             }
         }
 

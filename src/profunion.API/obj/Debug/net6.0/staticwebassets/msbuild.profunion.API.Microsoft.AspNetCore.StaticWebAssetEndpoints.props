@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kkl8quv699"},{"Name":"integrity","Value":"sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="},{"Name":"label","Value":"_content/profunion.API/installers/profunion-v1.2.1-setup.exe"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"82576408"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 16:30:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.aorrhwkxex.html">
+    <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.d40l9ej6fe.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"aorrhwkxex"},{"Name":"integrity","Value":"sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="},{"Name":"label","Value":"_content/profunion.API/Templates/EventInvitation.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2356"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:40:36 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d40l9ej6fe"},{"Name":"integrity","Value":"sha256-I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o="},{"Name":"label","Value":"_content/profunion.API/Templates/EventInvitation.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2373"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:57:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2356"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022JopOrbJc7kX9WtSpo62oAElI3plFGIleVbznzQuVzck=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:40:36 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2373"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022I7v6\u002BRhzjCz/7IgilmYGjfPsWsy1Wp9Kklva4pTTA5o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 09:57:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/ResetPasswordEmail.cevu9a5uzf.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\ResetPasswordEmail.html'))</AssetFile>

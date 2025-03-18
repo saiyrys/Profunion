@@ -99,7 +99,7 @@ namespace profunion.API.Controllers
         {
             if (updateNews == null)
             {
-                return BadRequest("Invalid data.");
+                return BadRequest("Неправильные данные");
             }
 
             var newsToUpdate = await _newsService.UpdateNews(newsId, updateNews);
@@ -110,7 +110,7 @@ namespace profunion.API.Controllers
             }
             else
             {
-                return StatusCode(500, "A problem happened while handling your request.");
+                return StatusCode(500, "Проблема произошла во время обработки запроса");
             }
         }
 
@@ -125,7 +125,7 @@ namespace profunion.API.Controllers
 
             if (!result)
             {
-                return NotFound("Новость не найдено");
+                return NotFound("Новость не найдена");
             }
 
             return Ok("Новость успешно удалена");
@@ -153,7 +153,7 @@ namespace profunion.API.Controllers
 
             if (result == null)
             {
-                return StatusCode(500, "Ошибка при создании медиа");
+                return StatusCode(500, "Ошибка при загрузке фотографии");
             }
 
             if (!ModelState.IsValid)
@@ -174,7 +174,7 @@ namespace profunion.API.Controllers
 
             if (filePath == null)
             {
-                return BadRequest("File not found");
+                return BadRequest("Файл не найден");
             }
 
             return Ok(true);

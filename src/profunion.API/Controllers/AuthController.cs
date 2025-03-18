@@ -47,6 +47,11 @@ namespace profunion.API.Controllers
 
             var login = await _authService.Login(loginUser);
 
+            if(login is null)
+            {
+                return BadRequest("Неправильный логин или пароль");
+            }
+
             return Ok(login);
         }
 
@@ -134,14 +139,14 @@ namespace profunion.API.Controllers
             string token = await _control.VerifyByTokenAsync();
 
             if (string.IsNullOrEmpty(token))
-                return Unauthorized("Token is unregister");
+                return Unauthorized("Не авторизован");
 
             var user = await _authService.GetUser(token);
 
             // Если пользователя не нашли — ошибка 404
             if (user == null)
             {
-                return NotFound(new { message = "User not found or token is invalid." });
+                return NotFound(new { message = "Пользователя не существует или не авторизован" });
             }
 
             return Ok(new ReturnRole { role = user.role });
@@ -162,7 +167,7 @@ namespace profunion.API.Controllers
             string token = HttpContext.Request.Cookies["refreshToken"];
 
             if (string.IsNullOrEmpty(token))
-                return BadRequest("Unathorized");
+                return BadRequest("Не авторзован в системе");
 
             var response = await _authService.GetNewTokens(token);
 

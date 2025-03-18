@@ -29,7 +29,7 @@ namespace profunion.API.Controllers
             }
             else
             {
-                return BadRequest("File not found");
+                return BadRequest("Файл не найден");
             }
         }
 
@@ -48,7 +48,7 @@ namespace profunion.API.Controllers
             }
             else
             {
-                return BadRequest("File not found");
+                return BadRequest("Файл не найден");
             }
         }
 

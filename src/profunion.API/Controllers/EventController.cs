@@ -121,7 +121,7 @@ namespace profunion.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            return Ok("Мероприятие успешно создан");
+            return Ok("Мероприятие успешно создано");
         }
 
         [HttpPatch("{eventId}")]
@@ -131,7 +131,7 @@ namespace profunion.API.Controllers
         {
             if (updateEvent == null)
             {
-                return BadRequest("Invalid data.");
+                return BadRequest("Неправильные данные");
             }
 
             var eventToUpdate = await _writerService.UpdateEvents(eventId, updateEvent, cancellation);
@@ -142,7 +142,7 @@ namespace profunion.API.Controllers
             }
             else
             {
-                return StatusCode(500, "A problem happened while handling your request.");
+                return StatusCode(500, "Проблема произошла во время обработки запроса.");
             }
         }
 
@@ -188,7 +188,7 @@ namespace profunion.API.Controllers
 
             if (result == null)
             {
-                return StatusCode(500, "Ошибка при создании медиа");
+                return StatusCode(500, "Ошибка при загрузке фотографии");
             }
 
             if (!ModelState.IsValid)
@@ -207,7 +207,7 @@ namespace profunion.API.Controllers
             var filePath = await _fileService.DeleteFile(fileName);
 
             if (filePath == null)
-                return BadRequest();
+                return BadRequest("Ошибка");
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
