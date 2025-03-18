@@ -9,8 +9,8 @@
       "PackagePath": "staticwebassets\\Templates\\ResetPasswordEmail.html"
     },
     {
-      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-v1.2.1-setup.exe",
-      "PackagePath": "staticwebassets\\installers\\profunion-v1.2.1-setup.exe"
+      "Id": "C:\\Users\\Павел\\Desktop\\Profunions\\src\\profunion.API\\wwwroot\\installers\\profunion-setup-1.2.8.exe",
+      "PackagePath": "staticwebassets\\installers\\profunion-setup-1.2.8.exe"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.profunion.API.props",

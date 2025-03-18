@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 16:55:01 GMT"
+          "Value": "Tue, 18 Mar 2025 17:15:49 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,7 +74,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 16:55:01 GMT"
+          "Value": "Tue, 18 Mar 2025 17:15:49 GMT"
         }
       ],
       "EndpointProperties": [
@@ -167,45 +167,8 @@
       ]
     },
     {
-      "Route": "installers/profunion-v1.2.1-setup.exe",
-      "AssetFile": "installers/profunion-v1.2.1-setup.exe",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "82576408"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/vnd.microsoft.portable-executable"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
-        }
-      ]
-    },
-    {
-      "Route": "installers/profunion-v1.2.1-setup.kkl8quv699.exe",
-      "AssetFile": "installers/profunion-v1.2.1-setup.exe",
+      "Route": "installers/profunion-setup-1.2.8.dclz5fj5xz.exe",
+      "AssetFile": "installers/profunion-setup-1.2.8.exe",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -218,7 +181,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "82576408"
+          "Value": "82733671"
         },
         {
           "Name": "Content-Type",
@@ -226,25 +189,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\""
+          "Value": "\"zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:30:07 GMT"
+          "Value": "Tue, 18 Mar 2025 19:44:26 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kkl8quv699"
+          "Value": "dclz5fj5xz"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="
+          "Value": "sha256-zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc="
         },
         {
           "Name": "label",
-          "Value": "installers/profunion-v1.2.1-setup.exe"
+          "Value": "installers/profunion-setup-1.2.8.exe"
+        }
+      ]
+    },
+    {
+      "Route": "installers/profunion-setup-1.2.8.exe",
+      "AssetFile": "installers/profunion-setup-1.2.8.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82733671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:44:26 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc="
         }
       ]
     }

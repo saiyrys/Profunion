@@ -1,1 +1,1 @@
-C:\Users\Павел\Desktop\Profunions\src\profunion.API\wwwroot\installers\profunion-v1.2.1-setup.exe
+C:\Users\Павел\Desktop\Profunions\src\profunion.API\wwwroot\installers\profunion-setup-1.2.8-setup.exe

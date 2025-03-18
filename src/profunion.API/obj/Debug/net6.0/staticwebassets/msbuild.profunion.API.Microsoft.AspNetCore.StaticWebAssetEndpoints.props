@@ -1,28 +1,28 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/profunion.API/installers/profunion-v1.2.1-setup.exe">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\installers\profunion-v1.2.1-setup.exe'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/installers/profunion-setup-1.2.8.dclz5fj5xz.exe">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\installers\profunion-setup-1.2.8.exe'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"82576408"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 16:30:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dclz5fj5xz"},{"Name":"integrity","Value":"sha256-zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc="},{"Name":"label","Value":"_content/profunion.API/installers/profunion-setup-1.2.8.exe"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"82733671"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 19:44:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/profunion.API/installers/profunion-v1.2.1-setup.kkl8quv699.exe">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\installers\profunion-v1.2.1-setup.exe'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/profunion.API/installers/profunion-setup-1.2.8.exe">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\installers\profunion-setup-1.2.8.exe'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kkl8quv699"},{"Name":"integrity","Value":"sha256-zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg="},{"Name":"label","Value":"_content/profunion.API/installers/profunion-v1.2.1-setup.exe"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"82576408"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022zN4aSMPLHFagUIDpeTPwU3PsA7y7of7EDF7eicQ3csg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 16:30:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"82733671"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022zYc7BcWEDrBQF5PBOOuWKZcGOq03/ydGCqv8kJzi1Mc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 19:44:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.4bmz6vpwyl.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4bmz6vpwyl"},{"Name":"integrity","Value":"sha256-sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY="},{"Name":"label","Value":"_content/profunion.API/Templates/EventInvitation.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2390"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 16:55:01 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2390"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 17:15:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/EventInvitation.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\EventInvitation.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2390"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 16:55:01 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2390"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022sI0DAWbwPVcnuW/z8FjxvJNODaWQ7BJDp/FwwocsexY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Mar 2025 17:15:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/profunion.API/Templates/ResetPasswordEmail.cevu9a5uzf.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Templates\ResetPasswordEmail.html'))</AssetFile>
