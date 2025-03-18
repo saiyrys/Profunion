@@ -29,7 +29,7 @@ namespace profunion.Applications.Services.Users.Sort
                     users = users.OrderByDescending(u => u.updatedAt);
                     break;
                 default:
-                    users = users.OrderBy(u => u.userName);
+                    users = users.OrderBy(u => u.role);
                     break;
             }
 

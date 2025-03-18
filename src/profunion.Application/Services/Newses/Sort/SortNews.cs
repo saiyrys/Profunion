@@ -29,7 +29,7 @@ namespace profunion.Applications.Services.Newses.Sort
                     news = news.OrderByDescending(n => n.createdAt);
                     break;
                 default:
-                    news = news.OrderBy(n => n.title);
+                    news = news.OrderBy(n => n.createdAt);
                     break;
             }
 

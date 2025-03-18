@@ -11,7 +11,7 @@ namespace profunion.API.Controllers
         /*[Authorize(Roles = "ADMIN, MODER")]*/
         public IActionResult DownloadInstaller()
         {
-            var fileName = "profunion-v1.2.1-setup.exe";
+            var fileName = "profunion-setup-v1.2.8.exe";
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "installers", fileName);
 
             if (!System.IO.File.Exists(filePath))
