@@ -8,6 +8,7 @@ using profunion.Domain.Persistance;
 using profunion.Infrastructure.Persistance.Repository;
 using profunion.Shared.Dto.Auth;
 using profunion.Shared.Dto.Users;
+using SendGrid.Helpers.Errors.Model;
 
 namespace profunion.API.Controllers
 {
@@ -18,12 +19,14 @@ namespace profunion.API.Controllers
         private readonly IUserService _userService;
         private readonly IAuthService _authService;
         private readonly IUserRepository _userRepository;
+        private readonly IControl<User> _control;
 
-        public UserController(IUserService userService,IAuthService authService, IUserRepository userRepository)
+        public UserController(IUserService userService,IAuthService authService, IUserRepository userRepository, IControl<User> control)
         {
             _userService = userService;
             _authService = authService;
             _userRepository = userRepository;
+            _control = control;
         }
 
         [HttpGet()]
@@ -70,12 +73,17 @@ namespace profunion.API.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetUserProfile()
         {
-            var user = await _authService.GetUser();
+            string token = await _control.VerifyByTokenAsync();
+
+            if (string.IsNullOrEmpty(token))
+                return Unauthorized("Token is unregister");
+
+            var user = await _authService.GetUser(token);
 
             // Если пользователя не нашли — ошибка 404
             if (user == null)
             {
-                return NotFound(new { message = "User not found or token is invalid." });
+                return Unauthorized(new { message = "User not found or token is invalid." });
             }
 
             return Ok(user);

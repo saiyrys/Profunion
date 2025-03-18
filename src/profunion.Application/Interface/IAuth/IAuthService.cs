@@ -14,7 +14,7 @@ namespace profunion.Applications.Interface.IAuth
 
         Task<LoginResponseDto> LoginEmail(string email, string code);
         Task<bool> Registration(RegistrationDto registration);
-        Task<UserInfoDto> GetUser();
+        Task<UserInfoDto> GetUser(string token);
         Task<LoginResponseDto> GetNewTokens(string refreshToken);
     }
 }

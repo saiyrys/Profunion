@@ -5,6 +5,7 @@ using profunion.Applications.Interface.IEmailService;
 using profunion.Domain.Models.UserModels;
 using profunion.Shared.Dto.Auth;
 using profunion.Shared.Dto.Auth.PWD;
+using SendGrid.Helpers.Errors.Model;
 
 
 namespace profunion.API.Controllers
@@ -130,7 +131,12 @@ namespace profunion.API.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetUserInfoByToken()
         {
-            var user = await _authService.GetUser();
+            string token = await _control.VerifyByTokenAsync();
+
+            if (string.IsNullOrEmpty(token))
+                return Unauthorized("Token is unregister");
+
+            var user = await _authService.GetUser(token);
 
             // Если пользователя не нашли — ошибка 404
             if (user == null)
@@ -154,7 +160,6 @@ namespace profunion.API.Controllers
             }
 
             string token = HttpContext.Request.Cookies["refreshToken"];
-
 
             if (string.IsNullOrEmpty(token))
                 return BadRequest("Unathorized");

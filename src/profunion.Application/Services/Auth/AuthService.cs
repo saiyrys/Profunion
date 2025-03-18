@@ -106,13 +106,8 @@ namespace profunion.Applications.Services.Auth
             return true;
         }
 
-        public async Task<UserInfoDto> GetUser()
+        public async Task<UserInfoDto> GetUser(string token)
         {
-            string token = await _control.VerifyByTokenAsync();
-
-            if (string.IsNullOrEmpty(token))
-                throw new ArgumentNullException("Token is unregister");
-
             var user = await _control.FindByTokenAsync(token);
 
             if (user == null)
