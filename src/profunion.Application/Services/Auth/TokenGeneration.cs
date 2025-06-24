@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using profunion.Domain.Constants;
 using profunion.Shared.Dto.Users;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -15,17 +14,19 @@ namespace profunion.Applications.Services.Auth
         private readonly IConfiguration Configuration;
         private readonly IHttpContextAccessor _httpContext;
 
-        private byte[] key = Encoding.UTF8.GetBytes(Auth_Constants.JWT_SECRET_KEY);
+        private byte[] _key;
 
         public TokenGeneration(IConfiguration configuration, IHttpContextAccessor httpContext)
         {
             Configuration = configuration;
             _httpContext = httpContext;
+            var secret = configuration["JwtOptions:SecretKey"];
+            _key = Encoding.UTF8.GetBytes(secret);
         }
 
         private async Task<string> GenerateAccessToken(UserInfoDto user)
         {
-            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);
+            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(_key), SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
@@ -56,7 +57,7 @@ namespace profunion.Applications.Services.Auth
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
 
-            var credentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);
+            var credentials = new SigningCredentials(new SymmetricSecurityKey(_key), SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
                 claims: claims,

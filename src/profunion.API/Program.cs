@@ -40,7 +40,6 @@ using profunion.API;
 using profunion.API.Background;
 using profunion.Applications.Interface.IEmailService;
 using profunion.Applications.Services.EmailService;
-using profunion.Domain.Constants;
 using profunion.Applications.Services.Auth.ResetPassword;
 
 
@@ -125,7 +124,7 @@ builder.Services.AddScoped<IUpdateMethods, UpdateMethods>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var secretKey = Encoding.UTF8.GetBytes(Auth_Constants.JWT_SECRET_KEY);
+var secretKey = Encoding.UTF8.GetBytes(builder.Configuration["JwtOptions:SecretKey"]);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

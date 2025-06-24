@@ -1,24 +1,26 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 using profunion.Applications.Interface.IAuth;
-using profunion.Domain.Constants;
 using profunion.Infrastructure.Data;
 using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 
 namespace profunion.Applications.Services.Auth
 {
     public class Control<TUser> : IControl<TUser> where TUser : class
     {
+        private readonly IConfiguration Configuration;
         private readonly ApplicationDbContext _context;
         private readonly IHttpContextAccessor HttpContext;
 
         protected virtual CancellationToken CancellationToken => CancellationToken.None;
 
-        public Control(ApplicationDbContext context, IHttpContextAccessor httpContext)
+        public Control(ApplicationDbContext context, IHttpContextAccessor httpContext, IConfiguration configuration)
         {
             _context = context;
-
+            Configuration = configuration; 
             HttpContext = httpContext;
 
         }
@@ -38,7 +40,7 @@ namespace profunion.Applications.Services.Auth
         }
         public virtual async Task<TUser> FindByTokenAsync(string token)
         {
-            string key = Auth_Constants.JWT_SECRET_KEY;
+            /*var key = Encoding.UTF8.GetBytes(Configuration["JwtOptions:SecretKey"]);*/
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
