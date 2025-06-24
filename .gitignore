@@ -1,0 +1,6 @@
+.vs
+db
+profsouz-kst-backend
+**/obj/
+**/bin/
+**appsettings.json
